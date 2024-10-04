@@ -1,9 +1,11 @@
 package controller;
+
 import java.util.ArrayList;
 
 import dao.AlunoDAO;
 import dao.DAOFactory;
 import model.Aluno;
+
 public class AlunoController {
     AlunoDAO aDAO = DAOFactory.AlunoDAO();
 
@@ -26,7 +28,16 @@ public class AlunoController {
     public boolean deletarAluno(int id) {
         return aDAO.deletarAluno(id);
     }
-        public Aluno buscarAlunoPorId(int id) {
+
+    public Aluno buscarAlunoPorId(int id) {
         return aDAO.buscarAlunoPorId(id);
+    }
+
+    public Aluno buscarAlunoPorMatricula(int Matricula) {
+        return aDAO.buscarAlunoPorMatricula(Matricula);
+    }
+
+    public Object buscarAlunoPorMatricula(String string) {
+        throw new UnsupportedOperationException("Unimplemented method 'buscarAlunoPorMatricula'");
     }
 }

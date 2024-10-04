@@ -22,8 +22,8 @@ public class TreinoController {
         return tDAO.getTreinoByNome(nome);
     }
 
-    public void atualizarTreino(Treino tVO) {
-        tDAO.atualizarTreino(tVO);
+    public void atualizarTreino(Treino tUP) {
+        tDAO.atualizarTreino(tUP);
     }
 
     public boolean deletarTreinos(int id) {

@@ -80,13 +80,37 @@ public class AlunoDAO {
         return aluno;
     }
 
-    public Aluno buscarAlunoPorId(int id) {
+    public Aluno buscarAlunoPorMatricula(int Matricula) {
         Aluno aluno = new Aluno();
         try {
             Connection con = Conexao.getConexao();
             String sql = "select * from academia where id = ?";
             PreparedStatement pst = con.prepareStatement(sql);
-            pst.setInt(1, id);
+            pst.setInt(1, Matricula);
+            ResultSet rs = pst.executeQuery();
+            while (rs.next()) {
+                aluno.setId(rs.getInt("id"));
+                aluno.setNome(rs.getString("nome"));
+                aluno.setData_De_Nascimento(rs.getString("data_de_nascimento"));
+                aluno.setEndereco(rs.getString("endereco"));
+                aluno.setEmail(rs.getString("email"));
+                aluno.setInfo_Medicas(rs.getString("info_medicas"));
+                aluno.setMatricula(rs.getInt("matricula"));
+                aluno.setTelefone(rs.getInt("telefone"));
+            }
+        } catch (SQLException e) {
+            System.out.println("Erro ao buscar Aluno por ID: \n" + e.getMessage());
+        }
+        return aluno;
+    }
+
+    public Aluno buscarAlunoPorId(int Id) {
+        Aluno aluno = new Aluno();
+        try {
+            Connection con = Conexao.getConexao();
+            String sql = "select * from academia where id = ?";
+            PreparedStatement pst = con.prepareStatement(sql);
+            pst.setInt(1, Id);
             ResultSet rs = pst.executeQuery();
             while (rs.next()) {
                 aluno.setId(rs.getInt("id"));

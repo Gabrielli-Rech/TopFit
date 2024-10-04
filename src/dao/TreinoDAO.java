@@ -7,18 +7,19 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import conexao.Conexao;
+import model.Academia;
 import model.Treino;
 
 public class TreinoDAO {
-    public Treino cadastrarTreino(Treino tVO) {
+    public Treino cadastrarTreino(Academia t2) {
         Treino t = new Treino();
         try (Connection con = Conexao.getConexao()) {
             String sql = "INSERT INTO academia (nome, id, inferior, superior) VALUES (?, ?, ?, ?)";
             PreparedStatement pst = con.prepareStatement(sql);
-            pst.setString(1, tVO.getNome());
-            pst.setInt(2, tVO.getId());
-            pst.setString(3, tVO.getinferior());
-            pst.setString(4, tVO.getsuperior());
+            pst.setString(1, t2.getNome());
+            pst.setInt(2, t2.getId());
+            pst.setString(3, t2.getinferior());
+            pst.setString(4, t2.getsuperior());
             pst.executeUpdate();
             System.out.println("Treino cadastrado com sucesso!");
         } catch (SQLException e) {
@@ -91,13 +92,13 @@ public class TreinoDAO {
         return t;
     }
 
-    public void atualizarTreino(Treino tVO) {
+    public void atualizarTreino(Academia tUP) {
         try (Connection con = Conexao.getConexao()) {
             String sql = "UPDATE academia SET inferior = ?, superior = ? WHERE id = ?";
             PreparedStatement pst = con.prepareStatement(sql);
-            pst.setString(1, tVO.getinferior());
-            pst.setString(2, tVO.getsuperior());
-            pst.setInt(3, tVO.getId());
+            pst.setString(1, tUP.getinferior());
+            pst.setString(2, tUP.getsuperior());
+            pst.setInt(3, tUP.getId());
             pst.executeUpdate();
         } catch (SQLException e) {
             System.out.println("Erro ao atualizar Treino: " + e.getMessage());
