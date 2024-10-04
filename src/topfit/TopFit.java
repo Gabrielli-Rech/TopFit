@@ -80,7 +80,7 @@ public class TopFit {
                 listarExercicios();
                 break;
             case 0:
-                System.out.println("Arena de objeto encerrada pelo usuário");
+                System.out.println("Academia encerrada pelo usuário");
                 break;
             default:
                 System.out.println("Opção inválida, tente novamente!");
