@@ -13,12 +13,13 @@ public void cadastrarExercicios(Exercicios eVO) {
         try {
             Connection con = Conexao.getConexao();
 
-            String sql = "Insert into academia values ( ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            String sql = "Insert into academia values ( ?, ?, ?, ?)";
             PreparedStatement pst = con.prepareStatement(sql);
-            pst.setString(1, eVO.getNome());
-            pst.setString(2, eVO.getExercicios());
-            pst.setString(3, eVO.getSeries_e_Repeticoes());
-            pst.setInt(4, eVO.getId());
+            pst.setInt(1, eVO.getId());
+            //pst.setInt(2, eVO.getId_musc());
+            pst.setString(3, eVO.getExercicios());
+            pst.setString(4, eVO.getSeries_e_Repeticoes());
+            pst.setInt(5, eVO.getId());
             pst.execute();
             System.out.println("Exercicios cadastrado com sucesso! ");
         } catch (SQLException e) {
@@ -35,8 +36,8 @@ public void cadastrarExercicios(Exercicios eVO) {
             ResultSet rs = pst.executeQuery();
             while (rs.next()) {
                 Exercicios Exercicios = new Exercicios();
-                Exercicios.setId(rs.getInt("id"));
-                Exercicios.setNome(rs.getString("nome"));
+                Exercicios.setId(rs.getInt("ID"));
+                //Exercicios.setId_musc(rs.getInt("ID_musc"));
                 Exercicios.setSeries_e_Repeticoes(rs.getString("Series_e_Repeticoes"));
                 Exercicios.setExercicios(rs.getString("Exercicios"));
                 ins.add(Exercicios);
@@ -57,7 +58,7 @@ public void cadastrarExercicios(Exercicios eVO) {
             ResultSet rs = pst.executeQuery();
             while (rs.next()) {
                 Exercicios.setId(rs.getInt("id"));
-                Exercicios.setNome(rs.getString("nome"));
+                //Exercicios.setId_musc(rs.getInt("ID_musc"));
                 Exercicios.setSeries_e_Repeticoes(rs.getString("Series_e_Repeticoes"));
                 Exercicios.setExercicios(rs.getString("Exercicios"));
             }
@@ -77,7 +78,7 @@ public void cadastrarExercicios(Exercicios eVO) {
             ResultSet rs = pst.executeQuery();
             while (rs.next()) {
                 Exercicios.setId(rs.getInt("id"));
-                Exercicios.setNome(rs.getString("nome"));
+                //Exercicios.setId_musc(rs.getInt("ID_musc"));
                 Exercicios.setSeries_e_Repeticoes(rs.getString("Series_e_Repeticoes"));
                 Exercicios.setExercicios(rs.getString("Exercicios"));
             }
@@ -90,7 +91,7 @@ public void cadastrarExercicios(Exercicios eVO) {
     public void atualizarExercicios(Exercicios aVO) {
         try {
             Connection con = Conexao.getConexao();
-            String sql = "update academia set Exercicios = ? where id = ?";
+            String sql = "update academia set exercicios = ? where ID = ?";
             PreparedStatement pst = con.prepareStatement(sql);
             pst.setString(1, aVO.getExercicios());
             pst.setInt(2, aVO.getId());
@@ -103,7 +104,7 @@ public void cadastrarExercicios(Exercicios eVO) {
     public boolean deletarExercicios(int id) {
         try {
             Connection con = Conexao.getConexao();
-            String sql = "delete from academia where id = ?";
+            String sql = "delete from academia where ID = ?";
             PreparedStatement pst = con.prepareStatement(sql);
             pst.setInt(1, id);
             return pst.executeUpdate() != 0;

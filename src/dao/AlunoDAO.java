@@ -35,19 +35,19 @@ public class AlunoDAO {
         ArrayList<Aluno> alunos = new ArrayList<>();
         try {
             Connection con = Conexao.getConexao();
-            String sql = "select * from academia where matricula is not null";
+            String sql = "select * from academia where Matricula is not null";
             PreparedStatement pst = con.prepareStatement(sql);
             ResultSet rs = pst.executeQuery();
             while (rs.next()) {
                 Aluno aluno = new Aluno();
-                aluno.setId(rs.getInt("id"));
-                aluno.setNome(rs.getString("nome"));
-                aluno.setData_De_Nascimento(rs.getString("data_de_nascimento"));
-                aluno.setEndereco(rs.getString("endereco"));
-                aluno.setInfo_Medicas(rs.getString("info_medicas"));
-                aluno.setEmail(rs.getString("email"));
-                aluno.setMatricula(rs.getInt("matricula"));
-                aluno.setTelefone(rs.getInt("telefone"));
+                aluno.setNome(rs.getString("Nome"));
+                aluno.setData_De_Nascimento(rs.getString("Data_de_Nascimento"));
+                aluno.setEndereco(rs.getString("Endereco"));
+                aluno.setInfo_Medicas(rs.getString("Informacoes_medicas"));
+                aluno.setEmail(rs.getString("Email"));
+                aluno.setMatricula(rs.getInt("Matricula"));
+                aluno.setTelefone(rs.getInt("Telefone"));
+                aluno.setCPF(rs.getInt("CPF"));
                 alunos.add(aluno);
             }
         } catch (Exception e) {
@@ -65,14 +65,14 @@ public class AlunoDAO {
             pst.setString(1, "%" + nome + "%"); // Adicionando os curingas para o LIKE
             ResultSet rs = pst.executeQuery();
             while (rs.next()) {
-                aluno.setId(rs.getInt("id"));
-                aluno.setNome(rs.getString("nome"));
-                aluno.setData_De_Nascimento(rs.getString("data_de_nascimento"));
-                aluno.setEndereco(rs.getString("endereco"));
-                aluno.setEmail(rs.getString("email"));
-                aluno.setInfo_Medicas(rs.getString("info_medicas"));
-                aluno.setMatricula(rs.getInt("matricula"));
-                aluno.setTelefone(rs.getInt("telefone"));
+                aluno.setCPF(rs.getInt("CPF"));
+                aluno.setNome(rs.getString("Nome"));
+                aluno.setData_De_Nascimento(rs.getString("Data_de_Nascimento"));
+                aluno.setEndereco(rs.getString("Endereco"));
+                aluno.setEmail(rs.getString("Email"));
+                aluno.setInfo_Medicas(rs.getString("Informacoes_medicas"));
+                aluno.setMatricula(rs.getInt("Matricula"));
+                aluno.setTelefone(rs.getInt("Telefone"));
             }
         } catch (SQLException e) {
             System.out.println("Erro ao buscar Aluno por nome: \n" + e.getMessage());
@@ -84,22 +84,22 @@ public class AlunoDAO {
         Aluno aluno = new Aluno();
         try {
             Connection con = Conexao.getConexao();
-            String sql = "select * from academia where id = ?";
+            String sql = "select * from academia where Matricula = ?";
             PreparedStatement pst = con.prepareStatement(sql);
             pst.setInt(1, Matricula);
             ResultSet rs = pst.executeQuery();
             while (rs.next()) {
-                aluno.setId(rs.getInt("id"));
-                aluno.setNome(rs.getString("nome"));
-                aluno.setData_De_Nascimento(rs.getString("data_de_nascimento"));
-                aluno.setEndereco(rs.getString("endereco"));
-                aluno.setEmail(rs.getString("email"));
-                aluno.setInfo_Medicas(rs.getString("info_medicas"));
-                aluno.setMatricula(rs.getInt("matricula"));
-                aluno.setTelefone(rs.getInt("telefone"));
+                aluno.setCPF(rs.getInt("CPF"));
+                aluno.setNome(rs.getString("Nome"));
+                aluno.setData_De_Nascimento(rs.getString("Data_de_Nascimento"));
+                aluno.setEndereco(rs.getString("Endereco"));
+                aluno.setEmail(rs.getString("Email"));
+                aluno.setInfo_Medicas(rs.getString("Informacoes_medicas"));
+                aluno.setMatricula(rs.getInt("Matricula"));
+                aluno.setTelefone(rs.getInt("Telefone"));
             }
         } catch (SQLException e) {
-            System.out.println("Erro ao buscar Aluno por ID: \n" + e.getMessage());
+            System.out.println("Erro ao buscar Aluno por Matricula: \n" + e.getMessage());
         }
         return aluno;
     }
@@ -131,22 +131,22 @@ public class AlunoDAO {
     public void atualizarAluno(Aluno aVO) {
         try {
             Connection con = Conexao.getConexao();
-            String sql = "update academia set data_de_nascimento = ? where id = ?";
+            String sql = "update academia set Data_de_Nascimento = ? where Matricula = ?";
             PreparedStatement pst = con.prepareStatement(sql);
             pst.setString(1, aVO.getData_De_Nascimento());
-            pst.setInt(2, aVO.getId());
+            pst.setInt(2, aVO.getMatricula());
             pst.executeUpdate();
         } catch (Exception e) {
             System.out.println("Erro ao atualizar Aluno: \n" + e.getMessage());
         }
     }
 
-    public boolean deletarAluno(int id) {
+    public boolean deletarAluno(int Matricula) {
         try {
             Connection con = Conexao.getConexao();
-            String sql = "delete from academia where id = ?";
+            String sql = "delete from academia where Matricula = ?";
             PreparedStatement pst = con.prepareStatement(sql);
-            pst.setInt(1, id);
+            pst.setInt(1, Matricula);
             return pst.executeUpdate() != 0;
         } catch (Exception e) {
             System.out.println("Erro ao deletar Aluno: \n" + e.getMessage());
