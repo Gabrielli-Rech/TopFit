@@ -32,10 +32,12 @@ public class JFAluno extends javax.swing.JFrame {
         jMenu2 = new javax.swing.JMenu();
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         jMenuBar2 = new javax.swing.JMenuBar();
         jMenu3 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuAluno = new javax.swing.JMenuItem();
+        jMenuTreino = new javax.swing.JMenuItem();
+        jMenuMedica = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
 
         jMenu1.setText("File");
@@ -48,32 +50,51 @@ public class JFAluno extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel3.setText("jLabel3");
+        jPanel1.setBackground(new java.awt.Color(0, 51, 204));
+        jPanel1.setForeground(new java.awt.Color(0, 51, 204));
+
+        jLabel2.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setText("Menu Inicial Aluno");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(58, 58, 58)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 346, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(82, Short.MAX_VALUE))
+                .addGap(94, 94, 94)
+                .addComponent(jLabel2)
+                .addContainerGap(110, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(115, 115, 115)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(234, Short.MAX_VALUE))
+                .addGap(217, 217, 217)
+                .addComponent(jLabel2)
+                .addContainerGap(365, Short.MAX_VALUE))
         );
 
         jMenu3.setText("Selecione ");
 
-        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.SHIFT_DOWN_MASK));
-        jMenuItem1.setText("Aluno");
-        jMenu3.add(jMenuItem1);
+        jMenuAluno.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.SHIFT_DOWN_MASK));
+        jMenuAluno.setText("Aluno");
+        jMenuAluno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuAlunoActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuAluno);
 
-        jMenuItem2.setText("Intruror");
+        jMenuTreino.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_T, java.awt.event.InputEvent.SHIFT_DOWN_MASK));
+        jMenuTreino.setText("Treino");
+        jMenu3.add(jMenuTreino);
+
+        jMenuMedica.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_I, java.awt.event.InputEvent.SHIFT_DOWN_MASK));
+        jMenuMedica.setText("Info Medicas");
+        jMenu3.add(jMenuMedica);
+
+        jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_M, java.awt.event.InputEvent.SHIFT_DOWN_MASK));
+        jMenuItem2.setText("Mensalidade");
         jMenu3.add(jMenuItem2);
 
         jMenuBar2.add(jMenu3);
@@ -93,6 +114,10 @@ public class JFAluno extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jMenuAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuAlunoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuAlunoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -131,14 +156,16 @@ public class JFAluno extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenuItem jMenuAluno;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuBar jMenuBar2;
-    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuMedica;
+    private javax.swing.JMenuItem jMenuTreino;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
