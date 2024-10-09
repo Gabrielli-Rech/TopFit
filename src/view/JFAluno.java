@@ -50,7 +50,7 @@ public class JFAluno extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(0, 51, 204));
+        jPanel1.setBackground(new java.awt.Color(0, 204, 255));
         jPanel1.setForeground(new java.awt.Color(0, 51, 204));
 
         jLabel2.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
