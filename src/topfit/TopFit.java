@@ -91,7 +91,7 @@ public class TopFit {
     private static void listarAlunos() {
         System.out.println("Lista de Alunos:");
         for (Aluno a : alunos) {
-            System.out.println("Nome: " + a.getNome() + ", Matrícula: " + a.getMatricula());
+            System.out.println("Nome: " + a.getNome() + ", Matrícula: " + a.getMatricula() + ", CPF " + a.getCPF() + ", Email " + a.getEmail() + ", Data de nascimento" + a.getData_De_Nascimento());
         }
     }
 
@@ -117,7 +117,7 @@ public class TopFit {
                 System.out.print("Informe o nome do Aluno: ");
                 aluno.setNome(ler.nextLine());
                 System.out.print("Informe a matrícula do Aluno: ");
-                aluno.setMatricula(ler.nextLine());
+                aluno.setMatricula(opSP);
                 alunos.add(aluno);
                 AlunoController alunoController = ControllerFactory.getAlunoController();
                 alunoController.cadastrarAluno(aluno);

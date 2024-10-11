@@ -13,15 +13,6 @@ public class Academia {
     }
 
     // Clase para aluno e instrutor
-    /**
-     * @param Id
-     * @param Nome
-     * @param Endereco
-     * @param Telefone
-     * @param Data_De_Nascimento
-     * @param Email
-     * @param CPF
-     */
     public Academia(int Id, String Nome, String Endereco, int Telefone, String Data_De_Nascimento, String Email,
             int CPF) {
         this.Id = Id;

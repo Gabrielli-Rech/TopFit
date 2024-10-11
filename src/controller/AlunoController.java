@@ -37,7 +37,5 @@ public class AlunoController {
         return aDAO.buscarAlunoPorMatricula(Matricula);
     }
 
-    public Object buscarAlunoPorMatricula(String string) {
-        throw new UnsupportedOperationException("Unimplemented method 'buscarAlunoPorMatricula'");
     }
-}
+

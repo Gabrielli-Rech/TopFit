@@ -30,17 +30,16 @@ public class Aluno extends Academia {
         this.Matricula = Matricula;
     }
 
+    @Override
     public String toString() {
-        return "Aluno [Info_Medicas=" + Info_Medicas + ", getInfo_Medicas()=" + getInfo_Medicas() + ", getNome()="
-                + getNome()
-                + ", getid()=" + getid() + ", getendereco()=" + getEndereco() + ", gettelefone()=" + getTelefone()
-                + ",getdata_de_nascimento()=" + getData_De_Nascimento() + ",getemai()=" + getEmail() + ",getcpf=" +
-                getCPF() + ",getMatricula=" + getMatricula() + "]";
+        return "Aluno [Matricula=" + Matricula + ", Info_Medicas=" + Info_Medicas + ", getInfo_Medicas()="
+                + getInfo_Medicas() + ", getMatricula()=" + getMatricula() + ", getNome()=" + getNome() + ", getId()="
+                + getId() + ", getEndereco()=" + getEndereco() + ", getTelefone()=" + getTelefone()
+                + ", getData_De_Nascimento()=" + getData_De_Nascimento() + ", getCPF()=" + getCPF() + ", getEmail()="
+                + getEmail() + ", toString()=" + super.toString() + ", getid()=" + getid() + "]";
     }
 
-    public void setMatricula(String nextLine) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'setMatricula'");
-    }
+    
+    
 
 }

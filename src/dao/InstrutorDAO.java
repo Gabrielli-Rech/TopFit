@@ -23,6 +23,7 @@ public class InstrutorDAO {
             pst.setInt(5, iVO.getId());
             pst.setInt(6, iVO.getTelefone());
             pst.setString(7, iVO.getCertificadoInstrutor());
+            pst.setInt(8, iVO.getCPF());
             pst.execute();
             System.out.println("Instrutor cadastrado com sucesso! ");
         } catch (SQLException e) {
@@ -46,6 +47,7 @@ public class InstrutorDAO {
                 Instrutor.setEmail(rs.getString("email"));
                 Instrutor.setCertificadoInstrutor(rs.getString("CertificadoInstrutor"));
                 Instrutor.setTelefone(rs.getInt("telefone"));
+                Instrutor.setCPF(rs.getInt("CPF"));
                 ins.add(Instrutor);
             }
         } catch (Exception e) {
@@ -70,6 +72,7 @@ public class InstrutorDAO {
                 Instrutor.setEmail(rs.getString("email"));
                 Instrutor.setCertificadoInstrutor(rs.getString("CertificadoInstrutor"));
                 Instrutor.setTelefone(rs.getInt("telefone"));
+                Instrutor.setCPF(rs.getInt("CPF"));
             }
         } catch (SQLException e) {
             System.out.println("Erro ao buscar instrutor por nome: \n" + e.getMessage());
@@ -93,6 +96,7 @@ public class InstrutorDAO {
                 Instrutor.setEmail(rs.getString("email"));
                 Instrutor.setCertificadoInstrutor(rs.getString("CertificadoInstrutor"));
                 Instrutor.setTelefone(rs.getInt("telefone"));
+                Instrutor.setCPF(rs.getInt("CPF"));
             }
         } catch (SQLException e) {
             System.out.println("Erro ao buscar instrutor por ID: \n" + e.getMessage());
