@@ -16,7 +16,6 @@ public class JFPrincipal extends javax.swing.JFrame {
      */
     public JFPrincipal() {
         initComponents();
-
     }
 
     /**
@@ -138,9 +137,11 @@ public class JFPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
+
         JFNovoCadastro janelaNC = new JFNovoCadastro();
         janelaNC.setVisible(true);
         janelaNC.setDefaultCloseOperation(1);
+        // TODO add your handling code here:
     }//GEN-LAST:event_jToggleButton2ActionPerformed
 
     /**
