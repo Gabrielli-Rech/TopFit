@@ -7,12 +7,10 @@ import controller.AlunoController;
 import controller.ControllerFactory;
 import controller.ExercicioController;
 import controller.InstrutorController;
-import controller.TreinoController;
 import model.Aluno;
 import model.Exercicios;
 import model.GrupoMuscular;
 import model.Instrutor;
-import model.Treino;
 
 public class TopFit {
 
@@ -21,7 +19,6 @@ public class TopFit {
     static ArrayList<Instrutor> instrutores = new ArrayList<>();
     static ArrayList<Exercicios> exercicios = new ArrayList<>();
     static ArrayList<GrupoMuscular> gruposMusculares = new ArrayList<>();
-    static ArrayList<Treino> treinos = new ArrayList<>();
 
     public static int lerInt() {
         int num = -1; // Inicializa com um valor inválido
@@ -74,7 +71,7 @@ public class TopFit {
                 listarAlunos();
                 break;
             case 3:
-                listarTreinos();
+                
                 break;
             case 4:
                 listarExercicios();
@@ -92,13 +89,6 @@ public class TopFit {
         System.out.println("Lista de Alunos:");
         for (Aluno a : alunos) {
             System.out.println("Nome: " + a.getNome() + ", Matrícula: " + a.getMatricula() + ", CPF " + a.getCPF() + ", Email " + a.getEmail() + ", Data de nascimento" + a.getData_De_Nascimento());
-        }
-    }
-
-    private static void listarTreinos() {
-        System.out.println("Lista de Treinos:");
-        for (Treino t : treinos) {
-            System.out.println("Nome do Treino: " + t.getNome());
         }
     }
 
@@ -132,13 +122,7 @@ public class TopFit {
                 instrutorController.cadastrarInstrutor(instrutor);
                 break;
             case 3: // Cadastrar Treino
-                System.out.println(" < Criar Treino >");
-                Treino treino = new Treino();
-                System.out.print("Informe o nome do Treino: ");
-                treino.setNome(ler.nextLine());
-                treinos.add(treino);
-                TreinoController treinoController = ControllerFactory.getTreinoController();
-                treinoController.cadastrarTreino(treino);
+
                 break;
             case 4: // Cadastrar Exercício
                 System.out.println(" < Criar Exercício >");
