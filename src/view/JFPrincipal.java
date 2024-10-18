@@ -5,6 +5,8 @@
  */
 package view;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author 182310009
@@ -34,11 +36,13 @@ public class JFPrincipal extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        Login = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        jToggleButton1 = new javax.swing.JToggleButton();
-        jToggleButton2 = new javax.swing.JToggleButton();
+        SenhaLogin = new javax.swing.JPasswordField();
+        EntrarLogin = new javax.swing.JToggleButton();
+        CadastroNovo = new javax.swing.JToggleButton();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
 
         jMenu2.setText("File");
         jMenuBar2.add(jMenu2);
@@ -59,20 +63,44 @@ public class JFPrincipal extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Login");
 
-        jTextField1.setBackground(new java.awt.Color(153, 153, 153));
+        Login.setBackground(new java.awt.Color(153, 153, 153));
+        Login.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LoginActionPerformed(evt);
+            }
+        });
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Senha");
 
-        jPasswordField1.setBackground(new java.awt.Color(153, 153, 153));
-
-        jToggleButton1.setText("Entrar");
-
-        jToggleButton2.setText("Cadastrar");
-        jToggleButton2.addActionListener(new java.awt.event.ActionListener() {
+        SenhaLogin.setBackground(new java.awt.Color(153, 153, 153));
+        SenhaLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton2ActionPerformed(evt);
+                SenhaLoginActionPerformed(evt);
+            }
+        });
+
+        EntrarLogin.setText("Entrar");
+        EntrarLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EntrarLoginActionPerformed(evt);
+            }
+        });
+
+        CadastroNovo.setText("Cadastrar");
+        CadastroNovo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CadastroNovoActionPerformed(evt);
+            }
+        });
+
+        jRadioButton1.setText("Instrutor");
+
+        jRadioButton2.setText("Aluno");
+        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton2ActionPerformed(evt);
             }
         });
 
@@ -91,12 +119,19 @@ public class JFPrincipal extends javax.swing.JFrame {
                                     .addComponent(jLabel2))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jTextField1)
-                                    .addComponent(jPasswordField1, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE)))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jToggleButton1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jToggleButton2)
+                                    .addComponent(Login)
+                                    .addComponent(SenhaLogin, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jRadioButton1)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jRadioButton2))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(EntrarLogin)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(CadastroNovo)))
                                 .addGap(44, 44, 44))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
@@ -110,15 +145,19 @@ public class JFPrincipal extends javax.swing.JFrame {
                 .addGap(43, 43, 43)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Login, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(30, 30, 30)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
+                    .addComponent(SenhaLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(26, 26, 26)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jToggleButton1)
-                    .addComponent(jToggleButton2))
+                    .addComponent(jRadioButton1)
+                    .addComponent(jRadioButton2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(EntrarLogin)
+                    .addComponent(CadastroNovo))
                 .addGap(30, 30, 30))
         );
 
@@ -136,13 +175,44 @@ public class JFPrincipal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
+    private void CadastroNovoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CadastroNovoActionPerformed
 
         JFNovoCadastro janelaNC = new JFNovoCadastro();
         janelaNC.setVisible(true);
         janelaNC.setDefaultCloseOperation(1);
         // TODO add your handling code here:
-    }//GEN-LAST:event_jToggleButton2ActionPerformed
+    }//GEN-LAST:event_CadastroNovoActionPerformed
+
+    private void EntrarLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EntrarLoginActionPerformed
+        // TODO add your handling code here:
+        String username = Login.getText();
+        String password = new String(SenhaLogin.getPassword());
+
+        // Exemplo de autenticação simples
+        if (username.equals("admin") && password.equals("senha123")) {
+            JOptionPane.showMessageDialog(this, "Login bem-sucedido!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
+            // Aqui você pode abrir a próxima tela ou funcionalidade
+        } else {
+            JOptionPane.showMessageDialog(this, "Usuário ou senha incorretos.", "Erro", JOptionPane.ERROR_MESSAGE);
+            // Limpar os campos após falha, se desejar
+            Login.setText("");
+            SenhaLogin.setText("");
+        }
+
+
+    }//GEN-LAST:event_EntrarLoginActionPerformed
+
+    private void SenhaLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SenhaLoginActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SenhaLoginActionPerformed
+
+    private void LoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_LoginActionPerformed
+
+    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -170,7 +240,7 @@ public class JFPrincipal extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(JFPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
+        java.awt.EventQueue.invokeLater(() -> new JFPrincipal().setVisible(true));
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -180,6 +250,10 @@ public class JFPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JToggleButton CadastroNovo;
+    private javax.swing.JToggleButton EntrarLogin;
+    private javax.swing.JTextField Login;
+    private javax.swing.JPasswordField SenhaLogin;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -188,9 +262,7 @@ public class JFPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JToggleButton jToggleButton1;
-    private javax.swing.JToggleButton jToggleButton2;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton2;
     // End of variables declaration//GEN-END:variables
 }
