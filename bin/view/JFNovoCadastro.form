@@ -93,7 +93,7 @@
             <Container class="javax.swing.JPanel" name="jPanel3">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="66" green="66" red="0" type="rgb"/>
+                  <Color blue="0" green="0" red="0" type="rgb"/>
                 </Property>
               </Properties>
               <Constraints>
@@ -127,13 +127,13 @@
                                                   <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
                                                   <Component id="jLabel15" alignment="1" min="-2" max="-2" attributes="0"/>
                                                   <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jLabel16" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="Formadepagamento" alignment="1" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <Component id="jLabel17" alignment="0" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Group type="102" attributes="0">
-                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                                       <Group type="102" attributes="0">
                                                           <Component id="DataDeNascimentoUsuario" min="-2" pref="164" max="-2" attributes="0"/>
@@ -144,13 +144,6 @@
                                                       </Group>
                                                       <Component id="EmailUsuario" max="32767" attributes="0"/>
                                                       <Component id="InfoMedicasUauario" alignment="0" max="32767" attributes="0"/>
-                                                      <Group type="102" alignment="1" attributes="0">
-                                                          <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
-                                                          <Component id="VoltarLogin" min="-2" max="-2" attributes="0"/>
-                                                          <EmptySpace max="32767" attributes="0"/>
-                                                          <Component id="Cadastrar" min="-2" max="-2" attributes="0"/>
-                                                          <EmptySpace min="-2" pref="135" max="-2" attributes="0"/>
-                                                      </Group>
                                                       <Group type="102" alignment="1" attributes="0">
                                                           <Component id="Pix" min="-2" max="-2" attributes="0"/>
                                                           <EmptySpace max="32767" attributes="0"/>
@@ -164,9 +157,20 @@
                                               </Group>
                                               <Group type="102" alignment="0" attributes="0">
                                                   <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
-                                                  <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                                                  <Component id="SenhaUsuario" min="-2" pref="183" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Group type="102" attributes="0">
+                                                          <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
+                                                          <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                                                          <Component id="SenhaUsuario" min="-2" pref="183" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <Group type="102" alignment="0" attributes="0">
+                                                          <Component id="VoltarLogin" min="-2" max="-2" attributes="0"/>
+                                                          <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                                                          <Component id="LimparUsu" min="-2" max="-2" attributes="0"/>
+                                                          <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                                                          <Component id="Cadastrar" min="-2" max="-2" attributes="0"/>
+                                                      </Group>
+                                                  </Group>
                                               </Group>
                                           </Group>
                                       </Group>
@@ -225,7 +229,7 @@
                           <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="Pix" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel16" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="Formadepagamento" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="Dinheiro" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="Credito" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="Debito" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -239,8 +243,9 @@
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="Cadastrar" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="VoltarLogin" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="LimparUsu" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="156" max="32767" attributes="0"/>
+                          <EmptySpace min="84" pref="156" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -266,6 +271,9 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="CelularUsuario">
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CelularUsuarioActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel11">
                   <Properties>
@@ -279,8 +287,14 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="SexoUsuario">
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SexoUsuarioActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JTextField" name="CPFUsuario">
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CPFUsuarioActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JTextField" name="NomeUsuario">
                   <Events>
@@ -320,6 +334,9 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="DataDeNascimentoUsuario">
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DataDeNascimentoUsuarioActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel15">
                   <Properties>
@@ -334,7 +351,7 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="InfoMedicasUauarioActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel16">
+                <Component class="javax.swing.JLabel" name="Formadepagamento">
                   <Properties>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -349,6 +366,9 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Pix"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PixActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="Dinheiro">
                   <Properties>
@@ -405,6 +425,9 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Cadastrar"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CadastrarActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="VoltarLogin">
                   <Properties>
@@ -417,12 +440,23 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="VoltarLoginActionPerformed"/>
                   </Events>
                 </Component>
+                <Component class="javax.swing.JButton" name="LimparUsu">
+                  <Properties>
+                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Limpar"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="LimparUsuActionPerformed"/>
+                  </Events>
+                </Component>
               </SubComponents>
             </Container>
             <Container class="javax.swing.JPanel" name="jPanel2">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="66" green="66" red="0" type="rgb"/>
+                  <Color blue="0" green="0" red="0" type="rgb"/>
                 </Property>
               </Properties>
               <Constraints>
@@ -572,6 +606,9 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="CelularInstru">
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CelularInstruActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel5">
                   <Properties>
@@ -611,6 +648,9 @@
                   </Events>
                 </Component>
                 <Component class="javax.swing.JTextField" name="DTNSCInstrutor">
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DTNSCInstrutorActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JTextField" name="CREAInstrutor">
                   <Events>
@@ -618,6 +658,9 @@
                   </Events>
                 </Component>
                 <Component class="javax.swing.JTextField" name="CPFInstrutor">
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CPFInstrutorActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel19">
                   <Properties>
@@ -628,6 +671,9 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JPasswordField" name="SenhaInstrutor">
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SenhaInstrutorActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="CadastrarIns">
                   <Properties>
@@ -647,6 +693,9 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Voltar"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="VoltarLoginInsActionPerformed"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
