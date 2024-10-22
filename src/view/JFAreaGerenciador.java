@@ -42,10 +42,25 @@ public class JFAreaGerenciador extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/lohgo.jpg"))); // NOI18N
 
         EditarTreinoInstru.setText("Editar Treino");
+        EditarTreinoInstru.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EditarTreinoInstruActionPerformed(evt);
+            }
+        });
 
         VerTreinoInstru.setText("Ver Treino");
+        VerTreinoInstru.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VerTreinoInstruActionPerformed(evt);
+            }
+        });
 
         EditarInfoInstru.setText("Editar informações");
+        EditarInfoInstru.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EditarInfoInstruActionPerformed(evt);
+            }
+        });
 
         VerInfoInstru.setText("Ver informações");
 
@@ -62,7 +77,7 @@ public class JFAreaGerenciador extends javax.swing.JFrame {
                         .addComponent(jLabel1)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGap(18, 18, 18)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGap(26, 26, 26)
@@ -72,12 +87,12 @@ public class JFAreaGerenciador extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(EditarTreinoInstru, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(3, 3, 3)
+                                .addGap(9, 9, 9)
                                 .addComponent(EditarInfoInstru, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(107, 107, 107)
                         .addComponent(jLabel2)))
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addContainerGap(74, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -89,13 +104,15 @@ public class JFAreaGerenciador extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addContainerGap(54, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(EditarTreinoInstru)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(VerInfoInstru)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(EditarInfoInstru))
-                    .addComponent(jLabel1))
-                .addContainerGap(54, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addComponent(EditarInfoInstru)
+                        .addGap(48, 48, 48))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -111,6 +128,19 @@ public class JFAreaGerenciador extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void VerTreinoInstruActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VerTreinoInstruActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_VerTreinoInstruActionPerformed
+
+    private void EditarInfoInstruActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditarInfoInstruActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EditarInfoInstruActionPerformed
+
+    private void EditarTreinoInstruActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditarTreinoInstruActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EditarTreinoInstruActionPerformed
 
     /**
      * @param args the command line arguments

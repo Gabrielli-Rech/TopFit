@@ -45,6 +45,11 @@ public class JFAreaUsuario extends javax.swing.JFrame {
         });
 
         EditarInfoUsu.setText("Editar Informações ");
+        EditarInfoUsu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EditarInfoUsuActionPerformed(evt);
+            }
+        });
 
         VerInfoUsu.setText("Ver Informações");
         VerInfoUsu.addActionListener(new java.awt.event.ActionListener() {
@@ -120,6 +125,10 @@ public class JFAreaUsuario extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_VerInfoUsuActionPerformed
 
+    private void EditarInfoUsuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditarInfoUsuActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EditarInfoUsuActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -148,10 +157,8 @@ public class JFAreaUsuario extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new JFAreaUsuario().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new JFAreaUsuario().setVisible(true);
         });
     }
 

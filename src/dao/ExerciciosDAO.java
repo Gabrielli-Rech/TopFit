@@ -13,13 +13,12 @@ public void cadastrarExercicios(Exercicios eVO) {
         try {
             Connection con = Conexao.getConexao();
 
-            String sql = "Insert into academia values ( ?, ?, ?, ?)";
+            String sql = "Insert into academia values ( ?,?,null,null,null,null,null,null,null,null,?,null,null,null,null,null,null,null,null,null,null,null,null,?)";
             PreparedStatement pst = con.prepareStatement(sql);
             pst.setInt(1, eVO.getId());
-            //pst.setInt(2, eVO.getId_musc());
+            pst.setString(2, eVO.getNome());
             pst.setString(3, eVO.getExercicios());
             pst.setString(4, eVO.getSeries_e_Repeticoes());
-            pst.setInt(5, eVO.getId());
             pst.execute();
             System.out.println("Exercicios cadastrado com sucesso! ");
         } catch (SQLException e) {

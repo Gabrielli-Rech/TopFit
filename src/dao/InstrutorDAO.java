@@ -14,7 +14,7 @@ public class InstrutorDAO {
         try {
             Connection con = Conexao.getConexao();
 
-            String sql = "Insert into academia values ( ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            String sql = "Insert into academia values ( ?,?,?,?,?,?,null,?,?,?,null,null,null,null,null,null,null,null,null,null,null,null,null)";
             PreparedStatement pst = con.prepareStatement(sql);
             pst.setString(1, iVO.getNome());
             pst.setString(2, iVO.getEndereco());

@@ -9,21 +9,22 @@ import java.util.ArrayList;
 import conexao.Conexao;
 import model.Aluno;
 
+
+
 public class AlunoDAO {
     public void cadastrarAluno(Aluno aVO) {
         try {
             Connection con = Conexao.getConexao();
 
-            String sql = "Insert into academia values ( ?, ?, ?, ?, ?, ?, ?, ?, null)";
+            String sql = "Insert into academia values ( null,?,?,?,?,?,?,?,null,?,null,null,null,null,null,null,null,null,null,null,null,?,null)";
             PreparedStatement pst = con.prepareStatement(sql);
             pst.setString(1, aVO.getNome());
             pst.setString(2, aVO.getEndereco());
             pst.setString(3, aVO.getData_De_Nascimento());
             pst.setString(4, aVO.getEmail());
-            pst.setInt(5, aVO.getId());
-            pst.setString(6, aVO.getInfo_Medicas());
-            pst.setInt(7, aVO.getTelefone());
-            pst.setInt(8, aVO.getMatricula());
+            pst.setString(5, aVO.getInfo_Medicas());
+            pst.setInt(6, aVO.getTelefone());
+            pst.setInt(7, aVO.getMatricula());
             pst.execute();
             System.out.println("Aluno cadastrado com sucesso! ");
         } catch (SQLException e) {

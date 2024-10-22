@@ -187,6 +187,7 @@ public class JFPrincipal extends javax.swing.JFrame {
 
     private void LoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_LoginActionPerformed
 
     /**
