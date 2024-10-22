@@ -120,6 +120,7 @@ public class JFAreaUsuario extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void TreinoUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TreinoUsuarioActionPerformed
+<<<<<<< HEAD
         JFInfoTreino it = new JFInfoTreino();
         it.setVisible(true);
         it.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -135,6 +136,17 @@ public class JFAreaUsuario extends javax.swing.JFrame {
         JFInfoUsuario eiu = new JFInfoUsuario();
         eiu.setVisible(true);
         eiu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+=======
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TreinoUsuarioActionPerformed
+
+    private void VerInfoUsuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VerInfoUsuActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_VerInfoUsuActionPerformed
+
+    private void EditarInfoUsuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditarInfoUsuActionPerformed
+        // TODO add your handling code here:
+>>>>>>> 68b045b2dc472415ca0fa1783ab81ade06614166
     }//GEN-LAST:event_EditarInfoUsuActionPerformed
 
     /**

@@ -50,11 +50,14 @@ public class Admin extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+<<<<<<< HEAD
         jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Admin(evt);
             }
         });
+=======
+>>>>>>> 68b045b2dc472415ca0fa1783ab81ade06614166
         jScrollPane1.setViewportView(jTable1);
 
         jLabel1.setText("Aluno e funcionario");
@@ -105,10 +108,13 @@ public class Admin extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+<<<<<<< HEAD
     private void Admin(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Admin
         // TODO add your handling code here:
     }//GEN-LAST:event_Admin
 
+=======
+>>>>>>> 68b045b2dc472415ca0fa1783ab81ade06614166
     /**
      * @param args the command line arguments
      */

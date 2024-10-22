@@ -104,9 +104,12 @@
                   </Table>
                 </Property>
               </Properties>
+<<<<<<< HEAD
               <Events>
                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Admin"/>
               </Events>
+=======
+>>>>>>> 68b045b2dc472415ca0fa1783ab81ade06614166
             </Component>
           </SubComponents>
         </Container>

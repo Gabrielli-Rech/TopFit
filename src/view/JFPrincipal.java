@@ -5,7 +5,10 @@
  */
 package view;
 
+<<<<<<< HEAD
 import javax.swing.JFrame;
+=======
+>>>>>>> 68b045b2dc472415ca0fa1783ab81ade06614166
 import javax.swing.JOptionPane;
 
 /**
@@ -168,6 +171,7 @@ public class JFPrincipal extends javax.swing.JFrame {
         String username = Login.getText();
         String password = new String(SenhaLogin.getPassword());
 
+<<<<<<< HEAD
         if (username.equals("admin") && password.equals("senha123")) {
             JOptionPane.showMessageDialog(this, "Login bem-sucedido!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
             // Aqui você pode abrir a próxima tela ou funcionalidade
@@ -175,12 +179,19 @@ public class JFPrincipal extends javax.swing.JFrame {
             a.setVisible(true);
             a.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             
+=======
+        // Exemplo de autenticação simples
+        if (username.equals("admin") && password.equals("senha123")) {
+            JOptionPane.showMessageDialog(this, "Login bem-sucedido!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
+            // Aqui você pode abrir a próxima tela ou funcionalidade
+>>>>>>> 68b045b2dc472415ca0fa1783ab81ade06614166
         } else {
             JOptionPane.showMessageDialog(this, "Usuário ou senha incorretos.", "Erro", JOptionPane.ERROR_MESSAGE);
             // Limpar os campos após falha, se desejar
             Login.setText("");
             SenhaLogin.setText("");
         }
+<<<<<<< HEAD
         if (username.equals("instrutor") && password.equals("senha123")) {
             JOptionPane.showMessageDialog(this, "Login bem-sucedido!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
             // Aqui você pode abrir a próxima tela ou funcionalidade
@@ -207,6 +218,10 @@ public class JFPrincipal extends javax.swing.JFrame {
             Login.setText("");
             SenhaLogin.setText("");
         }
+=======
+
+
+>>>>>>> 68b045b2dc472415ca0fa1783ab81ade06614166
     }//GEN-LAST:event_EntrarLoginActionPerformed
 
     private void SenhaLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SenhaLoginActionPerformed
@@ -215,7 +230,11 @@ public class JFPrincipal extends javax.swing.JFrame {
 
     private void LoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginActionPerformed
         // TODO add your handling code here:
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 68b045b2dc472415ca0fa1783ab81ade06614166
     }//GEN-LAST:event_LoginActionPerformed
 
     /**

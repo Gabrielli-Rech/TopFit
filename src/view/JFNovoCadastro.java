@@ -136,6 +136,7 @@ public class JFNovoCadastro extends javax.swing.JFrame {
 
         Pix.setForeground(new java.awt.Color(255, 255, 255));
         Pix.setText("Pix");
+<<<<<<< HEAD
         Pix.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 PixActionPerformed(evt);
@@ -166,6 +167,33 @@ public class JFNovoCadastro extends javax.swing.JFrame {
             }
         });
 
+=======
+
+        Dinheiro.setForeground(new java.awt.Color(255, 255, 255));
+        Dinheiro.setText("Dinheiro");
+        Dinheiro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DinheiroActionPerformed(evt);
+            }
+        });
+
+        Credito.setForeground(new java.awt.Color(255, 255, 255));
+        Credito.setText("Cartão de crédito ");
+        Credito.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CreditoActionPerformed(evt);
+            }
+        });
+
+        Debito.setForeground(new java.awt.Color(255, 255, 255));
+        Debito.setText("Cartão de débito");
+        Debito.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DebitoActionPerformed(evt);
+            }
+        });
+
+>>>>>>> 68b045b2dc472415ca0fa1783ab81ade06614166
         jLabel18.setForeground(new java.awt.Color(255, 255, 255));
         jLabel18.setText("Senha");
 
@@ -544,10 +572,13 @@ public class JFNovoCadastro extends javax.swing.JFrame {
     private void CadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CadastrarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_CadastrarActionPerformed
+<<<<<<< HEAD
 
     private void PixActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PixActionPerformed
       
     }//GEN-LAST:event_PixActionPerformed
+=======
+>>>>>>> 68b045b2dc472415ca0fa1783ab81ade06614166
 
     /**
      * @param args the command line arguments
