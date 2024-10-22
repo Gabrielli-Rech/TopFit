@@ -3,8 +3,6 @@ package model;
 public class Exercicios extends Academia {
     private String Exercicios;
     private String Series_e_Repeticoes;
-    private String superior;
-    private String inferior;
 
     public Exercicios() {
     }
@@ -12,24 +10,10 @@ public class Exercicios extends Academia {
     public Exercicios(String id, String nome, String endereco, int telefone, String data_de_nascimento, String email,
             String cpf, String superior, String inferior) {
         super();
-        this.Exercicios = Exercicios;
-        this.Series_e_Repeticoes = Series_e_Repeticoes;
-        this.superior = superior;
-        this.inferior = inferior;
-    }
-    public String getsuperior() {
-        return superior;
+        //this.Exercicios = Exercicios;
+        //this.Series_e_Repeticoes = Series_e_Repeticoes;
     }
 
-    public void setsuperior(String superior) {
-        this.superior = superior;
-    }
-    public String getinferior (){
-        return inferior;
-    }
-    public void setinferior(String inferior){
-        this.inferior = inferior;
-    }
     public String getExercicios() {
         return Exercicios;
     }

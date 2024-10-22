@@ -13,6 +13,11 @@ public class ControllerFactory {
         return InstrutorC;
     }
 
+    private static TreinoController TreinoC = new TreinoController();
+
+    public static TreinoController getTreinoController() {
+        return TreinoC;
+    }
     private static GrupoMuscularController GrupoMuscularC = new GrupoMuscularController();
 
     public static GrupoMuscularController getGrupoMuscularController(){

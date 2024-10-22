@@ -7,10 +7,12 @@ import controller.AlunoController;
 import controller.ControllerFactory;
 import controller.ExercicioController;
 import controller.InstrutorController;
+import controller.TreinoController;
 import model.Aluno;
 import model.Exercicios;
 import model.GrupoMuscular;
 import model.Instrutor;
+import model.Treino;
 
 public class TopFit {
 
@@ -19,6 +21,7 @@ public class TopFit {
     static ArrayList<Instrutor> instrutores = new ArrayList<>();
     static ArrayList<Exercicios> exercicios = new ArrayList<>();
     static ArrayList<GrupoMuscular> gruposMusculares = new ArrayList<>();
+    static ArrayList<Treino> treinos = new ArrayList<>();
 
     public static int lerInt() {
         int num = -1; // Inicializa com um valor inválido
@@ -71,7 +74,7 @@ public class TopFit {
                 listarAlunos();
                 break;
             case 3:
-                
+                listarTreinos();
                 break;
             case 4:
                 listarExercicios();
@@ -92,6 +95,13 @@ public class TopFit {
         }
     }
 
+    private static void listarTreinos() {
+        System.out.println("Lista de Treinos:");
+        for (Treino t : treinos) {
+            System.out.println("Nome do Treino: " + t.getNome());
+        }
+    }
+
     private static void listarExercicios() {
         System.out.println("Lista de Exercícios:");
         for (Exercicios e : exercicios) {
@@ -106,8 +116,18 @@ public class TopFit {
                 Aluno aluno = new Aluno();
                 System.out.print("Informe o nome do Aluno: ");
                 aluno.setNome(ler.nextLine());
+                System.out.print("Informe o Endereço do aluno: ");
+                aluno.setEndereco(ler.nextLine());
+                System.out.print("Informe sua data de Nascimento: ");
+                aluno.setData_De_Nascimento(ler.nextLine());
+                System.out.print("Informe seu Email: ");
+                aluno.setEmail(ler.nextLine());
+                System.out.print("Posui informações medicas? ");
+                aluno.setInfo_Medicas(ler.nextLine());
+                System.out.print("Informe seu Telefone: ");
+                aluno.setTelefone(ler.nextInt());
                 System.out.print("Informe a matrícula do Aluno: ");
-                aluno.setMatricula(opSP);
+                aluno.setMatricula(ler.nextInt());
                 alunos.add(aluno);
                 AlunoController alunoController = ControllerFactory.getAlunoController();
                 alunoController.cadastrarAluno(aluno);
@@ -122,7 +142,13 @@ public class TopFit {
                 instrutorController.cadastrarInstrutor(instrutor);
                 break;
             case 3: // Cadastrar Treino
-
+                System.out.println(" < Criar Treino >");
+                Treino treino = new Treino();
+                System.out.print("Informe o nome do Treino: ");
+                treino.setNome(ler.nextLine());
+                treinos.add(treino);
+                TreinoController treinoController = ControllerFactory.getTreinoController();
+                treinoController.cadastrarTreino(treino);
                 break;
             case 4: // Cadastrar Exercício
                 System.out.println(" < Criar Exercício >");

@@ -13,6 +13,12 @@ public class DAOFactory {
         return iDAO;
     }
 
+    private static TreinoDAO tDAO = new TreinoDAO();
+
+    public static TreinoDAO TreinoDAO() {
+        return tDAO;
+    }
+
     private static GrupoMuscularDAO gmDAO = new GrupoMuscularDAO();
 
     public static GrupoMuscularDAO GrupoMuscularDAO() {
