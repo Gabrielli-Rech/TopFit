@@ -15,16 +15,19 @@ public class AlunoDAO {
     public void cadastrarAluno(Aluno aVO) {
         try {
             Connection con = Conexao.getConexao();
-
-            String sql = "Insert into academia values ( null,?,?,?,?,?,?,?,null,?,null,null,null,null,null,null,null,null,null,null,null,?,null)";
+            String sql = ("insert into alunos (Nome, Endereco, Telefone, Data_de_Nascimento, Email, Info_Medicas, CPF, Sexo, Matricula, Senha");
             PreparedStatement pst = con.prepareStatement(sql);
             pst.setString(1, aVO.getNome());
             pst.setString(2, aVO.getEndereco());
-            pst.setString(3, aVO.getData_De_Nascimento());
-            pst.setString(4, aVO.getEmail());
-            pst.setString(5, aVO.getInfo_Medicas());
-            pst.setInt(6, aVO.getTelefone());
-            pst.setInt(7, aVO.getMatricula());
+            pst.setInt(3, aVO.getTelefone());
+            pst.setString(4, aVO.getData_De_Nascimento());
+            pst.setString(5, aVO.getEmail());
+            pst.setString(6, aVO.getInfo_Medicas());
+            pst.setInt(7, aVO.getCPF());
+            pst.setString(8, aVO.getSexo());
+            pst.setInt(9, aVO.getMatricula());
+            pst.setInt(10, aVO.getSenha());
+            
             pst.execute();
             System.out.println("Aluno cadastrado com sucesso! ");
         } catch (SQLException e) {

@@ -18,7 +18,6 @@ public class Instrutor extends Academia {
     public void setCertificadoInstrutor(String certificado_instrutor) {
         this.certificado_instrutor = certificado_instrutor;
     }
-    
 
     public String toString() {
         return "Instrutor [getNome()=" + getNome() + ", getId()=" + getId() + ", getEndereco()=" + getEndereco() +
