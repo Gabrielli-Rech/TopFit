@@ -12,10 +12,10 @@ import javax.swing.JFrame;
  */
 public class teste {
     public static void main(String[] args) {
-        JFNovoCadastro nc = new JFNovoCadastro();
-        nc.setVisible(true);
-        nc.setSize(820 , 774);
-        nc.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        //JFNovoCadastro nc = new JFNovoCadastro();
+        //nc.setVisible(true);
+        //nc.setSize(820 , 774);
+        //nc.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
     }
 

@@ -16,6 +16,7 @@ public class JFInfoTreino extends javax.swing.JFrame {
      */
     public JFInfoTreino() {
         initComponents();
+        EditarTreino.setVisible(false);
     }
 
     /**
@@ -31,6 +32,7 @@ public class JFInfoTreino extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         InfoTreino = new javax.swing.JTable();
+        EditarTreino = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -64,12 +66,21 @@ public class JFInfoTreino extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        InfoTreino.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                InfoTreino(evt);
+            }
+        });
         jScrollPane1.setViewportView(InfoTreino);
         if (InfoTreino.getColumnModel().getColumnCount() > 0) {
             InfoTreino.getColumnModel().getColumn(0).setResizable(false);
             InfoTreino.getColumnModel().getColumn(1).setResizable(false);
             InfoTreino.getColumnModel().getColumn(2).setResizable(false);
         }
+
+        EditarTreino.setBackground(new java.awt.Color(0, 0, 0));
+        EditarTreino.setForeground(new java.awt.Color(255, 255, 255));
+        EditarTreino.setText("Editar");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -82,14 +93,19 @@ public class JFInfoTreino extends javax.swing.JFrame {
                         .addComponent(jLabel1))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(80, 80, 80)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(268, 268, 268)
+                        .addComponent(EditarTreino)))
                 .addContainerGap(86, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(62, 62, 62)
+                .addGap(22, 22, 22)
+                .addComponent(EditarTreino)
+                .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 92, Short.MAX_VALUE))
         );
@@ -107,6 +123,10 @@ public class JFInfoTreino extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void InfoTreino(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_InfoTreino
+        EditarTreino.setVisible(true);
+    }//GEN-LAST:event_InfoTreino
 
     /**
      * @param args the command line arguments
@@ -145,6 +165,7 @@ public class JFInfoTreino extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JToggleButton EditarTreino;
     private javax.swing.JTable InfoTreino;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;

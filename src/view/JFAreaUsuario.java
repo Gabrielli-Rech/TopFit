@@ -31,12 +31,13 @@ public class JFAreaUsuario extends javax.swing.JFrame {
         EditarInfoUsu = new javax.swing.JToggleButton();
         VerInfoUsu = new javax.swing.JToggleButton();
         jLabel3 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
 
+        TreinoUsuario.setBackground(new java.awt.Color(0, 0, 0));
+        TreinoUsuario.setForeground(new java.awt.Color(255, 255, 255));
         TreinoUsuario.setText("Ver Treino");
         TreinoUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -44,6 +45,8 @@ public class JFAreaUsuario extends javax.swing.JFrame {
             }
         });
 
+        EditarInfoUsu.setBackground(new java.awt.Color(0, 0, 0));
+        EditarInfoUsu.setForeground(new java.awt.Color(255, 255, 255));
         EditarInfoUsu.setText("Editar Informações ");
         EditarInfoUsu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -51,6 +54,8 @@ public class JFAreaUsuario extends javax.swing.JFrame {
             }
         });
 
+        VerInfoUsu.setBackground(new java.awt.Color(0, 0, 0));
+        VerInfoUsu.setForeground(new java.awt.Color(255, 255, 255));
         VerInfoUsu.setText("Ver Informações");
         VerInfoUsu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -60,10 +65,6 @@ public class JFAreaUsuario extends javax.swing.JFrame {
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/lohgo.jpg"))); // NOI18N
 
-        jLabel1.setForeground(new java.awt.Color(0, 102, 255));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Usuario");
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -71,28 +72,21 @@ public class JFAreaUsuario extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(VerInfoUsu, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(34, 34, 34)
-                        .addComponent(TreinoUsuario))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel1))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(8, 8, 8)
-                                .addComponent(VerInfoUsu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(EditarInfoUsu))))
-                .addContainerGap(21, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(EditarInfoUsu)
+                            .addComponent(TreinoUsuario, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
+                .addContainerGap(43, Short.MAX_VALUE)
                 .addComponent(TreinoUsuario)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(VerInfoUsu)
@@ -118,15 +112,21 @@ public class JFAreaUsuario extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void TreinoUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TreinoUsuarioActionPerformed
-        // TODO add your handling code here:
+        JFInfoTreino janelaG = new JFInfoTreino();
+        janelaG.setVisible(true);
+        janelaG.setDefaultCloseOperation(1);
     }//GEN-LAST:event_TreinoUsuarioActionPerformed
 
     private void VerInfoUsuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VerInfoUsuActionPerformed
-        // TODO add your handling code here:
+        JFInfoUsuario janelaG = new JFInfoUsuario();
+        janelaG.setVisible(true);
+        janelaG.setDefaultCloseOperation(1);
     }//GEN-LAST:event_VerInfoUsuActionPerformed
 
     private void EditarInfoUsuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditarInfoUsuActionPerformed
-        // TODO add your handling code here:
+        JFInfoUsuario janelaG = new JFInfoUsuario();
+        janelaG.setVisible(true);
+        janelaG.setDefaultCloseOperation(1);
     }//GEN-LAST:event_EditarInfoUsuActionPerformed
 
     /**
@@ -166,7 +166,6 @@ public class JFAreaUsuario extends javax.swing.JFrame {
     private javax.swing.JToggleButton EditarInfoUsu;
     private javax.swing.JToggleButton TreinoUsuario;
     private javax.swing.JToggleButton VerInfoUsu;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables

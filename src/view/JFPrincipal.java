@@ -79,6 +79,8 @@ public class JFPrincipal extends javax.swing.JFrame {
             }
         });
 
+        EntrarLogin.setBackground(new java.awt.Color(0, 0, 0));
+        EntrarLogin.setForeground(new java.awt.Color(255, 255, 255));
         EntrarLogin.setText("Entrar");
         EntrarLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,6 +88,8 @@ public class JFPrincipal extends javax.swing.JFrame {
             }
         });
 
+        CadastroNovo.setBackground(new java.awt.Color(0, 0, 0));
+        CadastroNovo.setForeground(new java.awt.Color(255, 255, 255));
         CadastroNovo.setText("Cadastrar");
         CadastroNovo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -171,14 +175,39 @@ public class JFPrincipal extends javax.swing.JFrame {
         if (username.equals("admin") && password.equals("senha123")) {
             JOptionPane.showMessageDialog(this, "Login bem-sucedido!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
             // Aqui você pode abrir a próxima tela ou funcionalidade
+            Admin janelaNC = new Admin();
+            janelaNC.setVisible(true);
+            janelaNC.setDefaultCloseOperation(1);
         } else {
             JOptionPane.showMessageDialog(this, "Usuário ou senha incorretos.", "Erro", JOptionPane.ERROR_MESSAGE);
             // Limpar os campos após falha, se desejar
             Login.setText("");
             SenhaLogin.setText("");
         }
-
-
+        if (username.equals("instru") && password.equals("senha123")) {
+            JOptionPane.showMessageDialog(this, "Login bem-sucedido!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
+            // Aqui você pode abrir a próxima tela ou funcionalidade
+            JFInfoGerenciador janelaNC = new JFInfoGerenciador();
+            janelaNC.setVisible(true);
+            janelaNC.setDefaultCloseOperation(1);
+        } else {
+            JOptionPane.showMessageDialog(this, "Usuário ou senha incorretos.", "Erro", JOptionPane.ERROR_MESSAGE);
+            // Limpar os campos após falha, se desejar
+            Login.setText("");
+            SenhaLogin.setText("");
+        }
+        if (username.equals("aluno") && password.equals("senha123")) {
+            JOptionPane.showMessageDialog(this, "Login bem-sucedido!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
+            // Aqui você pode abrir a próxima tela ou funcionalidade
+            JFInfoUsuario janelaNC = new JFInfoUsuario();
+            janelaNC.setVisible(true);
+            janelaNC.setDefaultCloseOperation(1);
+        } else {
+            JOptionPane.showMessageDialog(this, "Usuário ou senha incorretos.", "Erro", JOptionPane.ERROR_MESSAGE);
+            // Limpar os campos após falha, se desejar
+            Login.setText("");
+            SenhaLogin.setText("");
+        }
     }//GEN-LAST:event_EntrarLoginActionPerformed
 
     private void SenhaLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SenhaLoginActionPerformed
@@ -187,7 +216,7 @@ public class JFPrincipal extends javax.swing.JFrame {
 
     private void LoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginActionPerformed
         // TODO add your handling code here:
-        
+
     }//GEN-LAST:event_LoginActionPerformed
 
     /**
