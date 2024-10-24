@@ -1,33 +1,73 @@
 package model;
 
-public class Treino extends Academia {
-    private String superior;
-    private String inferior;
+public class Treino {
+
+    private int Id;
+    private String Nome;
+    private String Exercicios;
+    private String Series_e_Repeticoes;
+    private String Inferior;
+    private String Superior;
 
     public Treino() {
-    }
-    public Treino(String id, String nome, String endereco, int telefone, String data_de_nascimento, String email, String cpf, String superior, String inferior) {
-        super();
-        this.superior = superior;
+        this.Id = Id;
+        this.Nome = Nome;
+        this.Exercicios = Exercicios;
+        this.Series_e_Repeticoes = Series_e_Repeticoes;
+
     }
 
-    public String getsuperior() {
-        return superior;
+    public int getId() {
+        return Id;
     }
 
-    public void setsuperior(String superior) {
-        this.superior = superior;
+    public void setId(int Id) {
+        this.Id = Id;
     }
-    public String getinferior (){
-        return inferior;
+
+    public String getNome() {
+        return Nome;
     }
-    public void setinferior(String inferior){
-        this.inferior = inferior;
+
+    public void setNome(String Nome) {
+        this.Nome = Nome;
     }
+
+    public String getExercicios() {
+        return Exercicios;
+    }
+
+    public void setExercicios(String Exercicios) {
+        this.Exercicios = Exercicios;
+    }
+
+    public String getSeries_e_Repeticoes() {
+        return Series_e_Repeticoes;
+    }
+
+    public void setSeries_e_Repeticoes(String Series_e_Repeticoes) {
+        this.Series_e_Repeticoes = Series_e_Repeticoes;
+    }
+
+    public String getInferior() {
+        return Inferior;
+    }
+
+    public void setInferior(String Inferior) {
+        this.Inferior = Inferior;
+    }
+
+    public String getSuperior() {
+        return Superior;
+    }
+
+    public void setSuperior(String Superior) {
+        this.Superior = Superior;
+    }
+
+    @Override
     public String toString() {
-        return "Instrutor [getNome()=" + getNome() + ", getId()=" + getId() + ", getEndereco()=" + getEndereco() +
-        ", getTelefone()=" + getTelefone() + ", getDataDeNascimento()=" + getData_De_Nascimento() +
-        ", getEmail()=" + getEmail() + ", getCpf()=" + getCPF() + ", getsuperior()=" + getsuperior() +", getinferior" + getinferior() + "]";
+        return "Treino [Id=" + Id + ", Nome=" + Nome + ", Exercicios=" + Exercicios + ", Series_e_Repeticoes="
+                + Series_e_Repeticoes + ", Inferior=" + Inferior + ", Superior=" + Superior + "]";
     }
-
 }

@@ -5,10 +5,6 @@
  */
 package model;
 
-/**
- *
- * @author 182310085
- */
 public class Alunos {
 
     private String Nome;
@@ -16,21 +12,23 @@ public class Alunos {
     private int Telefone;
     private String Data_De_Nascimento;
     private String Sexo;
+    private String Matricula;
     private String Email;
+    private String Info_Medicas;
     private int CPF;
     private int Senha;
 
-    public Alunos(String Nome, String Endereco, int Telefone, String Data_De_Nascimento, String Email, String Sexo, int CPF, int Senha) {
-
+    public Alunos() {
         this.Nome = Nome;
         this.Endereco = Endereco;
         this.Telefone = Telefone;
         this.Data_De_Nascimento = Data_De_Nascimento;
         this.Sexo = Sexo;
+        this.Matricula = Matricula;
         this.Email = Email;
+        this.Info_Medicas = Info_Medicas;
         this.CPF = CPF;
         this.Senha = Senha;
-
     }
 
     public String getNome() {
@@ -65,12 +63,20 @@ public class Alunos {
         this.Data_De_Nascimento = Data_De_Nascimento;
     }
 
-    public int getCPF() {
-        return CPF;
+    public String getSexo() {
+        return Sexo;
     }
 
-    public void setCPF(int CPF) {
-        this.CPF = CPF;
+    public void setSexo(String Sexo) {
+        this.Sexo = Sexo;
+    }
+
+    public String getMatricula() {
+        return Matricula;
+    }
+
+    public void setMatricula(String Matricula) {
+        this.Matricula = Matricula;
     }
 
     public String getEmail() {
@@ -81,12 +87,20 @@ public class Alunos {
         this.Email = Email;
     }
 
-    public String getSexo() {
-        return Sexo;
+    public String getInfo_Medicas() {
+        return Info_Medicas;
     }
 
-    public void setSexo(String Sexo) {
-        this.Sexo = Sexo;
+    public void setInfo_Medicas(String Info_Medicas) {
+        this.Info_Medicas = Info_Medicas;
+    }
+
+    public int getCPF() {
+        return CPF;
+    }
+
+    public void setCPF(int CPF) {
+        this.CPF = CPF;
     }
 
     public int getSenha() {
@@ -100,10 +114,7 @@ public class Alunos {
     @Override
     public String toString() {
         return "Alunos [Nome=" + Nome + ", Endereco=" + Endereco + ", Telefone=" + Telefone + ", Data_De_Nascimento="
-                + Data_De_Nascimento + ", Sexo=" + Sexo + ", Email=" + Email + ", CPF=" + CPF + ", Senha=" + Senha
-                + "]";
+                + Data_De_Nascimento + ", Sexo=" + Sexo + ", Matricula=" + Matricula + ", Email=" + Email
+                + ", Info_Medicas=" + Info_Medicas + ", CPF=" + CPF + ", Senha=" + Senha + "]";
     }
-
-    
-
 }

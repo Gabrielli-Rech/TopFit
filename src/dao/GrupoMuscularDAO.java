@@ -16,11 +16,11 @@ public void cadastrarGrupoMuscular(GrupoMuscular gmVO) {
 
             String sql = "Insert into academia values ( ?,?,null,null,null,null,null,null,null,null,null,?,?,?,?,?,?,?,?,?,?,null,null)";
             PreparedStatement pst = con.prepareStatement(sql);
-            pst.setString(1, gmVO.getNome());
-            pst.setString(2, gmVO.getTorax());
-            pst.setString(3, gmVO.getOmbro());
-            pst.setString(4, gmVO.getTriceps());
-            pst.setInt(5, gmVO.getId());
+            pst.setInt(1, gmVO.getId());
+            pst.setString(2, gmVO.getNome());
+            pst.setString(3, gmVO.getTorax());
+            pst.setString(4, gmVO.getOmbro());
+            pst.setString(5, gmVO.getTriceps());
             pst.setString(6, gmVO.getCostas());
             pst.setString(7, gmVO.getAbdomem());
             pst.setString(8, gmVO.getBiceps());

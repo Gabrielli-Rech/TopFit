@@ -14,16 +14,17 @@ public class InstrutorDAO {
         try {
             Connection con = Conexao.getConexao();
 
-            String sql = "Insert into academia values ( ?,?,?,?,?,?,null,?,?,?,null,null,null,null,null,null,null,null,null,null,null,null,null)";
+            String sql = "Insert into intrutores values ( ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             PreparedStatement pst = con.prepareStatement(sql);
             pst.setString(1, iVO.getNome());
             pst.setString(2, iVO.getEndereco());
             pst.setString(3, iVO.getData_De_Nascimento());
             pst.setString(4, iVO.getEmail());
-            pst.setInt(5, iVO.getId());
+            pst.setInt(5, iVO.getSenha());
             pst.setInt(6, iVO.getTelefone());
             pst.setString(7, iVO.getCertificadoInstrutor());
             pst.setInt(8, iVO.getCPF());
+            pst.setString(9, iVO.getId());
             pst.execute();
             System.out.println("Instrutor cadastrado com sucesso! ");
         } catch (SQLException e) {
@@ -35,12 +36,12 @@ public class InstrutorDAO {
         ArrayList<Instrutor> ins = new ArrayList<>();
         try {
             Connection con = Conexao.getConexao();
-            String sql = "select * from academia where CertificadoInstrutor is not null";
+            String sql = "select * from intrutores where CertificadoInstrutor is not null";
             PreparedStatement pst = con.prepareStatement(sql);
             ResultSet rs = pst.executeQuery();
             while (rs.next()) {
                 Instrutor Instrutor = new Instrutor();
-                Instrutor.setId(rs.getInt("id"));
+                Instrutor.setId(rs.getString("id"));
                 Instrutor.setNome(rs.getString("nome"));
                 Instrutor.setData_De_Nascimento(rs.getString("data_de_nascimento"));
                 Instrutor.setEndereco(rs.getString("endereco"));
@@ -60,12 +61,12 @@ public class InstrutorDAO {
         Instrutor Instrutor = new Instrutor();
         try {
             Connection con = Conexao.getConexao();
-            String sql = "select * from academia where nome like ?";
+            String sql = "select * from intrutores where nome like ?";
             PreparedStatement pst = con.prepareStatement(sql);
             pst.setString(1, "%" + nome + "%"); // Adicionando os curingas para o LIKE
             ResultSet rs = pst.executeQuery();
             while (rs.next()) {
-                Instrutor.setId(rs.getInt("id"));
+                Instrutor.setId(rs.getString("id"));
                 Instrutor.setNome(rs.getString("nome"));
                 Instrutor.setData_De_Nascimento(rs.getString("data_de_nascimento"));
                 Instrutor.setEndereco(rs.getString("endereco"));
@@ -84,12 +85,12 @@ public class InstrutorDAO {
         Instrutor Instrutor = new Instrutor();
         try {
             Connection con = Conexao.getConexao();
-            String sql = "select * from academia where id = ?";
+            String sql = "select * from intrutores where id = ?";
             PreparedStatement pst = con.prepareStatement(sql);
             pst.setInt(1, id);
             ResultSet rs = pst.executeQuery();
             while (rs.next()) {
-                Instrutor.setId(rs.getInt("id"));
+                Instrutor.setId(rs.getString("id"));
                 Instrutor.setNome(rs.getString("nome"));
                 Instrutor.setData_De_Nascimento(rs.getString("data_de_nascimento"));
                 Instrutor.setEndereco(rs.getString("endereco"));
@@ -107,10 +108,10 @@ public class InstrutorDAO {
     public void atualizarInstrutor(Instrutor aVO) {
         try {
             Connection con = Conexao.getConexao();
-            String sql = "update academia set CertificadoInstrutor = ? where id = ?";
+            String sql = "update intrutores set CertificadoInstrutor = ? where id = ?";
             PreparedStatement pst = con.prepareStatement(sql);
             pst.setString(1, aVO.getCertificadoInstrutor());
-            pst.setInt(2, aVO.getId());
+            pst.setString(2, aVO.getId());
             pst.executeUpdate();
         } catch (Exception e) {
             System.out.println("Erro ao atualizar Instrutor: \n" + e.getMessage());
@@ -120,7 +121,7 @@ public class InstrutorDAO {
     public boolean deletarInstrutor(int id) {
         try {
             Connection con = Conexao.getConexao();
-            String sql = "delete from academia where id = ?";
+            String sql = "delete from intrutores where id = ?";
             PreparedStatement pst = con.prepareStatement(sql);
             pst.setInt(1, id);
             return pst.executeUpdate() != 0;

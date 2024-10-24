@@ -5,11 +5,9 @@ import java.util.Scanner;
 
 import controller.AlunoController;
 import controller.ControllerFactory;
-import controller.ExercicioController;
 import controller.InstrutorController;
 import controller.TreinoController;
-import model.Aluno;
-import model.Exercicios;
+import model.Alunos;
 import model.GrupoMuscular;
 import model.Instrutor;
 import model.Treino;
@@ -17,9 +15,8 @@ import model.Treino;
 public class TopFit {
 
     static Scanner ler = new Scanner(System.in);
-    static ArrayList<Aluno> alunos = new ArrayList<>();
+    static ArrayList<Alunos> alunos = new ArrayList<>();
     static ArrayList<Instrutor> instrutores = new ArrayList<>();
-    static ArrayList<Exercicios> exercicios = new ArrayList<>();
     static ArrayList<GrupoMuscular> gruposMusculares = new ArrayList<>();
     static ArrayList<Treino> treinos = new ArrayList<>();
 
@@ -77,7 +74,6 @@ public class TopFit {
                 listarTreinos();
                 break;
             case 4:
-                listarExercicios();
                 break;
             case 0:
                 System.out.println("Academia encerrada pelo usuário");
@@ -90,7 +86,7 @@ public class TopFit {
 
     private static void listarAlunos() {
         System.out.println("Lista de Alunos:");
-        for (Aluno a : alunos) {
+        for (Alunos a : alunos) {
             System.out.println("Nome: " + a.getNome() + ", Matrícula: " + a.getMatricula() + ", CPF " + a.getCPF() + ", Email " + a.getEmail() + ", Data de nascimento" + a.getData_De_Nascimento());
         }
     }
@@ -102,18 +98,11 @@ public class TopFit {
         }
     }
 
-    private static void listarExercicios() {
-        System.out.println("Lista de Exercícios:");
-        for (Exercicios e : exercicios) {
-            System.out.println("Nome do Exercício: " + e.getNome());
-        }
-    }
-
     private static void criar(int opSP) {
         switch (opSP) {
             case 1: // Cadastrar Aluno
                 System.out.println(" < Criar Aluno >");
-                Aluno aluno = new Aluno();
+                Alunos aluno = new Aluno();
                 System.out.print("Informe o nome do Aluno: ");
                 aluno.setNome(ler.nextLine());
                 System.out.print("Informe o Endereço do aluno: ");
@@ -151,13 +140,6 @@ public class TopFit {
                 treinoController.cadastrarTreino(treino);
                 break;
             case 4: // Cadastrar Exercício
-                System.out.println(" < Criar Exercício >");
-                Exercicios exercicio = new Exercicios();
-                System.out.print("Informe o nome do Exercício: ");
-                exercicio.setNome(ler.nextLine());
-                exercicios.add(exercicio);
-                ExercicioController exercicioController = ControllerFactory.getExercicioController();
-                exercicioController.cadastrarExercicios(exercicio);
                 break;
             case 5: // Cadastrar Grupo Muscular (implementação básica)
                 System.out.println(" < Criar Grupo Muscular >");

@@ -81,6 +81,11 @@ public class JFInfoTreino extends javax.swing.JFrame {
         EditarTreino.setBackground(new java.awt.Color(0, 0, 0));
         EditarTreino.setForeground(new java.awt.Color(255, 255, 255));
         EditarTreino.setText("Editar");
+        EditarTreino.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EditarTreinoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -127,6 +132,10 @@ public class JFInfoTreino extends javax.swing.JFrame {
     private void InfoTreino(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_InfoTreino
         EditarTreino.setVisible(true);
     }//GEN-LAST:event_InfoTreino
+
+    private void EditarTreinoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditarTreinoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EditarTreinoActionPerformed
 
     /**
      * @param args the command line arguments

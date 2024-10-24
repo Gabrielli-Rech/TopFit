@@ -7,19 +7,20 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import conexao.Conexao;
-import model.Academia;
 import model.Treino;
 
 public class TreinoDAO {
-    public Treino cadastrarTreino(Academia t2) {
+    public Treino cadastrarTreino(Treino t2) {
         Treino t = new Treino();
         try (Connection con = Conexao.getConexao()) {
-            String sql = "INSERT INTO academia (nome, id, inferior, superior) VALUES (?,?,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,?,?,null,null,null)";
+            String sql = "INSERT INTO Treino (nome, id, inferior, superior) VALUES (?,?,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,?,?,null,null,null)";
             PreparedStatement pst = con.prepareStatement(sql);
             pst.setString(1, t2.getNome());
             pst.setInt(2, t2.getId());
             pst.setString(3, t2.getInferior());
             pst.setString(4, t2.getSuperior());
+            pst.setString(5, t2.getExercicios());
+            pst.setString(6, t2.getSeries_e_Repeticoes());
             pst.executeUpdate();
             System.out.println("Treino cadastrado com sucesso!");
         } catch (SQLException e) {
@@ -31,19 +32,15 @@ public class TreinoDAO {
     public ArrayList<Treino> listarTreinos() {
         ArrayList<Treino> treinos = new ArrayList<>();
         try (Connection con = Conexao.getConexao()) {
-            String sql = "SELECT * FROM academia WHERE matricula IS NOT NULL";
+            String sql = "SELECT * FROM Treino WHERE matricula IS NOT NULL";
             PreparedStatement pst = con.prepareStatement(sql);
             ResultSet rs = pst.executeQuery();
             while (rs.next()) {
                 Treino treino = new Treino();
                 treino.setId(rs.getInt("id"));
                 treino.setNome(rs.getString("nome"));
-                treino.setData_De_Nascimento(rs.getString("data_de_nascimento"));
-                treino.setEndereco(rs.getString("endereco"));
-                treino.setEmail(rs.getString("email"));
-                treino.setTelefone(rs.getInt("telefone"));
-                treino.setinferior(rs.getString("inferior"));
-                treino.setsuperior(rs.getString("superior"));
+                treino.setSuperior(rs.getString("inferior"));
+                treino.setInferior(rs.getString("superior"));
                 treinos.add(treino);
             }
         } catch (SQLException e) {
@@ -55,7 +52,7 @@ public class TreinoDAO {
     public Treino getTreinoByNome(String nome) {
         Treino t = null;
         try (Connection con = Conexao.getConexao()) {
-            String sql = "SELECT * FROM academia WHERE nome LIKE ?";
+            String sql = "SELECT * FROM Treino WHERE nome LIKE ?";
             PreparedStatement pst = con.prepareStatement(sql);
             pst.setString(1, nome);
             ResultSet rs = pst.executeQuery();
@@ -63,8 +60,8 @@ public class TreinoDAO {
                 t = new Treino();
                 t.setId(rs.getInt("id"));
                 t.setNome(rs.getString("nome"));
-                t.setinferior(rs.getString("inferior"));
-                t.setsuperior(rs.getString("superior"));
+                t.setSuperior(rs.getString("inferior"));
+                t.setInferior(rs.getString("superior"));
             }
         } catch (SQLException e) {
             System.out.println("Erro ao buscar Treino: " + e.getMessage());
@@ -75,7 +72,7 @@ public class TreinoDAO {
     public Treino getTreinoById(int id) {
         Treino t = null;
         try (Connection con = Conexao.getConexao()) {
-            String sql = "SELECT * FROM academia WHERE id = ?";
+            String sql = "SELECT * FROM Treino WHERE id = ?";
             PreparedStatement pst = con.prepareStatement(sql);
             pst.setInt(1, id);
             ResultSet rs = pst.executeQuery();
@@ -83,8 +80,8 @@ public class TreinoDAO {
                 t = new Treino();
                 t.setId(rs.getInt("id"));
                 t.setNome(rs.getString("nome"));
-                t.setinferior(rs.getString("inferior"));
-                t.setsuperior(rs.getString("superior"));
+                t.setSuperior(rs.getString("inferior"));
+                t.setInferior(rs.getString("superior"));
             }
         } catch (SQLException e) {
             System.out.println("Erro ao buscar Treino: " + e.getMessage());
@@ -92,9 +89,9 @@ public class TreinoDAO {
         return t;
     }
 
-    public void atualizarTreino(Academia tUP) {
+    public void atualizarTreino(Treino tUP) {
         try (Connection con = Conexao.getConexao()) {
-            String sql = "UPDATE academia SET inferior = ?, superior = ? WHERE id = ?";
+            String sql = "UPDATE Treino SET inferior = ?, superior = ? WHERE id = ?";
             PreparedStatement pst = con.prepareStatement(sql);
             pst.setString(1, tUP.getInferior());
             pst.setString(2, tUP.getSuperior());
@@ -107,7 +104,7 @@ public class TreinoDAO {
 
     public boolean deletarTreino(int id) {
         try (Connection con = Conexao.getConexao()) {
-            String sql = "DELETE FROM academia WHERE id = ?";
+            String sql = "DELETE FROM Treino WHERE id = ?";
             PreparedStatement pst = con.prepareStatement(sql);
             pst.setInt(1, id);
             return pst.executeUpdate() > 0;
