@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 import dao.DAOFactory;
 import dao.InstrutorDAO;
-import model.Academia;
 import model.Instrutor;
 
 public class InstrutorController {
@@ -30,7 +29,4 @@ public class InstrutorController {
         return iDAO.deletarInstrutor(id);
     }
 
-    public Academia getInstrutorPorId(int id) {
-        return iDAO.buscarInstrutorPorId(id);
-    }
 }

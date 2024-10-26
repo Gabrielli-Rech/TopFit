@@ -24,9 +24,4 @@ public class ControllerFactory {
         return GrupoMuscularC;
     }
 
-    private static ExercicioController ExercicioC = new ExercicioController();
-
-    public static ExercicioController getExercicioController(){
-        return ExercicioC;
-    }
 }

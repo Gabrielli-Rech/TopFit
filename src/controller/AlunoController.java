@@ -4,24 +4,24 @@ import java.util.ArrayList;
 
 import dao.AlunoDAO;
 import dao.DAOFactory;
-import model.Aluno;
+import model.Alunos;
 
 public class AlunoController {
     AlunoDAO aDAO = DAOFactory.AlunoDAO();
 
-    public void cadastrarAluno(Aluno aVO) {
+    public void cadastrarAluno(Alunos aVO) {
         aDAO.cadastrarAluno(aVO);
     }
 
-    public ArrayList<Aluno> listaAlunos() {
+    public ArrayList<Alunos> listaAlunos() {
         return aDAO.listarAlunos();
     }
 
-    public Aluno buscarAlunoPorNome(String nome) {
+    public Alunos buscarAlunoPorNome(String nome) {
         return aDAO.buscarAlunoPorNome(nome);
     }
 
-    public void atualizarAluno(Aluno aVO) {
+    public void atualizarAluno(Alunos aVO) {
         aDAO.atualizarAluno(aVO);
     }
 
@@ -29,11 +29,11 @@ public class AlunoController {
         return aDAO.deletarAluno(id);
     }
 
-    public Aluno buscarAlunoPorId(int id) {
+    public Alunos buscarAlunoPorId(int id) {
         return aDAO.buscarAlunoPorId(id);
     }
 
-    public Aluno buscarAlunoPorMatricula(int Matricula) {
+    public Alunos buscarAlunoPorMatricula(int Matricula) {
         return aDAO.buscarAlunoPorMatricula(Matricula);
     }
 

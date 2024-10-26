@@ -1,28 +1,48 @@
 package model;
+public class GrupoMuscular {
 
-public class GrupoMuscular extends Academia {
+    private int Id;
+    private String Nome;
     private String Torax;
     private String Ombro;
     private String Triceps;
     private String Costas;
     private String Abdomem;
-    private String Biceps;
     private String Pernas;
     private String Gluteo;
+    private String Superior;
+    private String Inferior;
+    private String Biceps;
 
     public GrupoMuscular() {
-    }
-
-    public GrupoMuscular(String id, String nome, String endereco, int telefone, String data_de_nascimento, String email, String cpf, String superior, String inferior, String Torax, String Ombro, String Triceps, String Costas, String Abdomem, String  Biceps, String Pernas, String Gluteo) {
-        super();
+        this.Id = Id;
+        this.Nome = Nome;
         this.Torax = Torax;
         this.Ombro = Ombro;
         this.Triceps = Triceps;
         this.Costas = Costas;
         this.Abdomem = Abdomem;
-        this.Biceps = Biceps;
         this.Pernas = Pernas;
         this.Gluteo = Gluteo;
+        this.Superior = Superior;
+        this.Inferior = Inferior;
+        this.Biceps = Biceps;
+    }
+
+    public int getId() {
+        return Id;
+    }
+
+    public void setId(int Id) {
+        this.Id = Id;
+    }
+
+    public String getNome() {
+        return Nome;
+    }
+
+    public void setNome(String Nome) {
+        this.Nome = Nome;
     }
 
     public String getTorax() {
@@ -36,14 +56,17 @@ public class GrupoMuscular extends Academia {
     public String getOmbro() {
         return Ombro;
     }
-    public String getTriceps(){
-        return Triceps;
-    }
-    public void setTriceps(String Triceps){
-        this.Triceps = Triceps;
-    }
+
     public void setOmbro(String Ombro) {
         this.Ombro = Ombro;
+    }
+
+    public String getTriceps() {
+        return Triceps;
+    }
+
+    public void setTriceps(String Triceps) {
+        this.Triceps = Triceps;
     }
 
     public String getCostas() {
@@ -62,14 +85,6 @@ public class GrupoMuscular extends Academia {
         this.Abdomem = Abdomem;
     }
 
-    public String getBiceps() {
-        return Biceps;
-    }
-
-    public void setBiceps(String Biceps) {
-        this.Biceps = Biceps;
-    }
-
     public String getPernas() {
         return Pernas;
     }
@@ -86,16 +101,34 @@ public class GrupoMuscular extends Academia {
         this.Gluteo = Gluteo;
     }
 
-    @Override
-    public String toString() {
-        return "GrupoMuscular [Torax=" + Torax + ", Ombro=" + Ombro + ", Triceps=" + Triceps + ", Costas=" + Costas
-                + ", Abdomem=" + Abdomem + ", Biceps=" + Biceps + ", Pernas=" + Pernas + ", Gluteo=" + Gluteo
-                + ", getNome()=" + getNome() + ", getTorax()=" + getTorax() + ", getId()=" + getId() + ", getOmbro()="
-                + getOmbro() + ", getEndereco()=" + getEndereco() + ", getCostas()=" + getCostas() + ", getTelefone()="
-                + getTelefone() + ", getAbdomem()=" + getAbdomem() + ", getData_De_Nascimento()="
-                + getData_De_Nascimento() + ", getBiceps()=" + getBiceps() + ", getCPF()=" + getCPF() + ", getPernas()="
-                + getPernas() + ", getEmail()=" + getEmail() + ", getGluteo()=" + getGluteo() + "]";
+    public String getSuperior() {
+        return Superior;
     }
 
-    
+    public void setSuperior(String Superior) {
+        this.Superior = Superior;
+    }
+
+    public String getInferior() {
+        return Inferior;
+    }
+
+    public void setInferior(String Inferior) {
+        this.Inferior = Inferior;
+    }
+
+    public String getBiceps() {
+        return Biceps;
+    }
+
+    public void setBiceps(String Biceps) {
+        this.Biceps = Biceps;
+    }
+
+    @Override
+    public String toString() {
+        return "GrupoMuscular [Id=" + Id + ", Nome=" + Nome + ", Torax=" + Torax + ", Ombro=" + Ombro + ", Triceps=" + Triceps
+                + ", Costas=" + Costas + ", Abdomem=" + Abdomem + ", Pernas=" + Pernas + ", Gluteo=" + Gluteo
+                + ", Superior=" + Superior + ", Inferior=" + Inferior + ", Biceps=" + Biceps + "]";
+    }
 }

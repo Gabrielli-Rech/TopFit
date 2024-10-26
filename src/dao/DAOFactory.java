@@ -24,10 +24,4 @@ public class DAOFactory {
     public static GrupoMuscularDAO GrupoMuscularDAO() {
         return gmDAO;
     }
-
-    private static ExerciciosDAO eDAO = new ExerciciosDAO();
-
-    public static ExerciciosDAO ExerciciosDAO() {
-        return eDAO;
-    }
 }

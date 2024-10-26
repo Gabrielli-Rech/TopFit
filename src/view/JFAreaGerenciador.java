@@ -5,11 +5,6 @@
  */
 package view;
 
-<<<<<<< HEAD
-import javax.swing.JFrame;
-
-=======
->>>>>>> 68b045b2dc472415ca0fa1783ab81ade06614166
 /**
  *
  * @author 182310018
@@ -38,10 +33,6 @@ public class JFAreaGerenciador extends javax.swing.JFrame {
         VerTreinoInstru = new javax.swing.JToggleButton();
         EditarInfoInstru = new javax.swing.JToggleButton();
         VerInfoInstru = new javax.swing.JToggleButton();
-<<<<<<< HEAD
-=======
-        jLabel2 = new javax.swing.JLabel();
->>>>>>> 68b045b2dc472415ca0fa1783ab81ade06614166
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -49,6 +40,8 @@ public class JFAreaGerenciador extends javax.swing.JFrame {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/lohgo.jpg"))); // NOI18N
 
+        EditarTreinoInstru.setBackground(new java.awt.Color(0, 0, 0));
+        EditarTreinoInstru.setForeground(new java.awt.Color(255, 255, 255));
         EditarTreinoInstru.setText("Editar Treino");
         EditarTreinoInstru.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -56,6 +49,8 @@ public class JFAreaGerenciador extends javax.swing.JFrame {
             }
         });
 
+        VerTreinoInstru.setBackground(new java.awt.Color(0, 0, 0));
+        VerTreinoInstru.setForeground(new java.awt.Color(255, 255, 255));
         VerTreinoInstru.setText("Ver Treino");
         VerTreinoInstru.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -63,6 +58,8 @@ public class JFAreaGerenciador extends javax.swing.JFrame {
             }
         });
 
+        EditarInfoInstru.setBackground(new java.awt.Color(0, 0, 0));
+        EditarInfoInstru.setForeground(new java.awt.Color(255, 255, 255));
         EditarInfoInstru.setText("Editar informações");
         EditarInfoInstru.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -70,157 +67,91 @@ public class JFAreaGerenciador extends javax.swing.JFrame {
             }
         });
 
+        VerInfoInstru.setBackground(new java.awt.Color(0, 0, 0));
+        VerInfoInstru.setForeground(new java.awt.Color(255, 255, 255));
         VerInfoInstru.setText("Ver informações");
-<<<<<<< HEAD
         VerInfoInstru.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 VerInfoInstruActionPerformed(evt);
             }
         });
-=======
-
-        jLabel2.setText("Gerenciador");
->>>>>>> 68b045b2dc472415ca0fa1783ab81ade06614166
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-<<<<<<< HEAD
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addComponent(jLabel1)
-                .addGap(30, 30, 30)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(VerInfoInstru, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(EditarTreinoInstru, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(VerTreinoInstru, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(EditarInfoInstru, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(53, 53, 53))
-=======
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel1)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(26, 26, 26)
-                                        .addComponent(VerTreinoInstru))
-                                    .addComponent(VerInfoInstru, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(EditarTreinoInstru, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(9, 9, 9)
-                                .addComponent(EditarInfoInstru, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(107, 107, 107)
-                        .addComponent(jLabel2)))
-                .addContainerGap(74, Short.MAX_VALUE))
->>>>>>> 68b045b2dc472415ca0fa1783ab81ade06614166
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addGap(28, 28, 28)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(VerTreinoInstru, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE)
+                    .addComponent(EditarInfoInstru, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE)
+                    .addComponent(VerInfoInstru, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(EditarTreinoInstru, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-<<<<<<< HEAD
-                .addGap(12, 12, 12)
+                .addGap(22, 22, 22)
                 .addComponent(VerTreinoInstru)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
+                        .addGap(18, 18, Short.MAX_VALUE)
                         .addComponent(EditarTreinoInstru)
                         .addGap(18, 18, 18)
                         .addComponent(VerInfoInstru)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(EditarInfoInstru)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel1)
-                        .addGap(25, 25, 25))))
-=======
-                .addContainerGap()
-                .addComponent(jLabel2)
-                .addGap(30, 30, 30)
-                .addComponent(VerTreinoInstru)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addContainerGap(54, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(EditarTreinoInstru)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(VerInfoInstru)
                         .addGap(18, 18, 18)
                         .addComponent(EditarInfoInstru)
-                        .addGap(48, 48, 48))))
->>>>>>> 68b045b2dc472415ca0fa1783ab81ade06614166
+                        .addGap(69, 69, 69))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel1)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-<<<<<<< HEAD
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE)
-=======
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
->>>>>>> 68b045b2dc472415ca0fa1783ab81ade06614166
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void VerTreinoInstruActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VerTreinoInstruActionPerformed
-<<<<<<< HEAD
-        JFInfoTreino nc = new JFInfoTreino();
-        nc.setVisible(true);
-        nc.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        JFInfoTreino janelaT = new JFInfoTreino();
+        janelaT.setVisible(true);
+        janelaT.setDefaultCloseOperation(1);
+
     }//GEN-LAST:event_VerTreinoInstruActionPerformed
 
     private void EditarInfoInstruActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditarInfoInstruActionPerformed
-        JFInfoGerenciador iu = new JFInfoGerenciador();
-        iu.setVisible(true);
-        iu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        JFInfoGerenciador janelaG = new JFInfoGerenciador();
+        janelaG.setVisible(true);
+        janelaG.setDefaultCloseOperation(1);
     }//GEN-LAST:event_EditarInfoInstruActionPerformed
 
     private void EditarTreinoInstruActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditarTreinoInstruActionPerformed
-
-                JFInfoTreino nc = new JFInfoTreino();
-        nc.setVisible(true);
-        nc.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        JFInfoTreino janelaT = new JFInfoTreino();
+        janelaT.setVisible(true);
+        janelaT.setDefaultCloseOperation(1);
     }//GEN-LAST:event_EditarTreinoInstruActionPerformed
 
     private void VerInfoInstruActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VerInfoInstruActionPerformed
-        JFInfoGerenciador iu = new JFInfoGerenciador();
-        iu.setVisible(true);
-        iu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        JFInfoGerenciador janelaG = new JFInfoGerenciador();
+        janelaG.setVisible(true);
+        janelaG.setDefaultCloseOperation(1);
     }//GEN-LAST:event_VerInfoInstruActionPerformed
 
-=======
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_VerTreinoInstruActionPerformed
-
-    private void EditarInfoInstruActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditarInfoInstruActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_EditarInfoInstruActionPerformed
-
-    private void EditarTreinoInstruActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditarTreinoInstruActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_EditarTreinoInstruActionPerformed
-
->>>>>>> 68b045b2dc472415ca0fa1783ab81ade06614166
     /**
      * @param args the command line arguments
      */
@@ -262,10 +193,6 @@ public class JFAreaGerenciador extends javax.swing.JFrame {
     private javax.swing.JToggleButton VerInfoInstru;
     private javax.swing.JToggleButton VerTreinoInstru;
     private javax.swing.JLabel jLabel1;
-<<<<<<< HEAD
-=======
-    private javax.swing.JLabel jLabel2;
->>>>>>> 68b045b2dc472415ca0fa1783ab81ade06614166
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
