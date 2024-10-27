@@ -51,7 +51,11 @@
                   <EmptySpace min="-2" pref="178" max="-2" attributes="0"/>
                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
+<<<<<<< HEAD
                   <Component id="EditarI" min="-2" max="-2" attributes="0"/>
+=======
+                  <Component id="jToggleButton1" min="-2" max="-2" attributes="0"/>
+>>>>>>> bb6d8ce7b62a30b9b3393245b3901fe2566dd95c
                   <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -66,7 +70,11 @@
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+<<<<<<< HEAD
                           <Component id="EditarI" min="-2" max="-2" attributes="0"/>
+=======
+                          <Component id="jToggleButton1" min="-2" max="-2" attributes="0"/>
+>>>>>>> bb6d8ce7b62a30b9b3393245b3901fe2566dd95c
                       </Group>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -138,7 +146,11 @@
             </Component>
           </SubComponents>
         </Container>
+<<<<<<< HEAD
         <Component class="javax.swing.JToggleButton" name="EditarI">
+=======
+        <Component class="javax.swing.JToggleButton" name="jToggleButton1">
+>>>>>>> bb6d8ce7b62a30b9b3393245b3901fe2566dd95c
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
@@ -149,7 +161,11 @@
             <Property name="text" type="java.lang.String" value="Editar"/>
           </Properties>
           <Events>
+<<<<<<< HEAD
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="EditarIActionPerformed"/>
+=======
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jToggleButton1ActionPerformed"/>
+>>>>>>> bb6d8ce7b62a30b9b3393245b3901fe2566dd95c
           </Events>
         </Component>
       </SubComponents>

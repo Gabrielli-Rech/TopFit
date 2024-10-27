@@ -102,7 +102,11 @@ public class TopFit {
         switch (opSP) {
             case 1: // Cadastrar Aluno
                 System.out.println(" < Criar Aluno >");
+<<<<<<< HEAD
                 Alunos aluno = new Alunos();
+=======
+                Alunos aluno = new Aluno();
+>>>>>>> bb6d8ce7b62a30b9b3393245b3901fe2566dd95c
                 System.out.print("Informe o nome do Aluno: ");
                 aluno.setNome(ler.nextLine());
                 System.out.print("Informe o Endereço do aluno: ");

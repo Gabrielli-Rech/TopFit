@@ -211,10 +211,32 @@ public class JFNovoCadastro extends javax.swing.JFrame {
         Cadastrar = new javax.swing.JButton();
         VoltarLogin = new javax.swing.JButton();
         filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 32767));
+<<<<<<< HEAD
         jLabel20 = new javax.swing.JLabel();
         EnderecoAluno = new javax.swing.JTextField();
         LimparA = new javax.swing.JToggleButton();
         usuarioRadioButton = new javax.swing.JRadioButton();
+=======
+        jPanel2 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        NomeInstru = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        EnderecoInstru = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        CelularInstru = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        EmailInstrutor = new javax.swing.JTextField();
+        DTNSCInstrutor = new javax.swing.JTextField();
+        CREAInstrutor = new javax.swing.JTextField();
+        CPFInstrutor = new javax.swing.JTextField();
+        jLabel19 = new javax.swing.JLabel();
+        SenhaInstrutor = new javax.swing.JPasswordField();
+        CadastrarIns = new javax.swing.JButton();
+        VoltarLoginIns = new javax.swing.JButton();
+>>>>>>> bb6d8ce7b62a30b9b3393245b3901fe2566dd95c
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
@@ -227,6 +249,7 @@ public class JFNovoCadastro extends javax.swing.JFrame {
 
         jTabbedPane1.setBackground(new java.awt.Color(0, 0, 0));
 
+<<<<<<< HEAD
         Instrutor.setBackground(new java.awt.Color(0, 0, 0));
         Instrutor.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -234,11 +257,262 @@ public class JFNovoCadastro extends javax.swing.JFrame {
             }
         });
 
+=======
+        jPanel3.setBackground(new java.awt.Color(0, 0, 0));
+
+        jLabel9.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("Celular");
+
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("Data de nascimento");
+
+        CelularUsuario.setBackground(new java.awt.Color(153, 153, 153));
+        CelularUsuario.setForeground(new java.awt.Color(153, 153, 153));
+
+        jLabel11.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setText("CPF");
+
+        SexoUsuario.setBackground(new java.awt.Color(153, 153, 153));
+        SexoUsuario.setForeground(new java.awt.Color(153, 153, 153));
+
+        CPFUsuario.setBackground(new java.awt.Color(153, 153, 153));
+        CPFUsuario.setForeground(new java.awt.Color(153, 153, 153));
+
+        NomeUsuario.setBackground(new java.awt.Color(153, 153, 153));
+        NomeUsuario.setForeground(new java.awt.Color(153, 153, 153));
+        NomeUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NomeUsuarioActionPerformed(evt);
+            }
+        });
+
+        jLabel12.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel12.setText("Nome Completo");
+
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel13.setText("Email");
+
+        EmailUsuario.setBackground(new java.awt.Color(153, 153, 153));
+        EmailUsuario.setForeground(new java.awt.Color(153, 153, 153));
+        EmailUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EmailUsuarioActionPerformed(evt);
+            }
+        });
+
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel14.setText("Sexo");
+
+        DataDeNascimentoUsuario.setBackground(new java.awt.Color(153, 153, 153));
+
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel15.setText("Informações medicas");
+
+        InfoMedicasUauario.setBackground(new java.awt.Color(153, 153, 153));
+        InfoMedicasUauario.setForeground(new java.awt.Color(153, 153, 153));
+        InfoMedicasUauario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                InfoMedicasUauarioActionPerformed(evt);
+            }
+        });
+
+        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel16.setText("Forma de pagamento");
+
+        Pix.setForeground(new java.awt.Color(255, 255, 255));
+        Pix.setText("Pix");
+
+        Dinheiro.setForeground(new java.awt.Color(255, 255, 255));
+        Dinheiro.setText("Dinheiro");
+        Dinheiro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DinheiroActionPerformed(evt);
+            }
+        });
+
+        Credito.setForeground(new java.awt.Color(255, 255, 255));
+        Credito.setText("Cartão de crédito ");
+        Credito.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CreditoActionPerformed(evt);
+            }
+        });
+
+        Debito.setForeground(new java.awt.Color(255, 255, 255));
+        Debito.setText("Cartão de débito");
+        Debito.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DebitoActionPerformed(evt);
+            }
+        });
+
+        jLabel18.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel18.setText("Senha");
+
+        SenhaUsuario.setBackground(new java.awt.Color(153, 153, 153));
+        SenhaUsuario.setForeground(new java.awt.Color(153, 153, 153));
+        SenhaUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SenhaUsuarioActionPerformed(evt);
+            }
+        });
+
+        Cadastrar.setBackground(new java.awt.Color(0, 0, 0));
+        Cadastrar.setForeground(new java.awt.Color(255, 255, 255));
+        Cadastrar.setText("Cadastrar");
+        Cadastrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CadastrarActionPerformed(evt);
+            }
+        });
+
+        VoltarLogin.setBackground(new java.awt.Color(0, 0, 0));
+        VoltarLogin.setForeground(new java.awt.Color(255, 255, 255));
+        VoltarLogin.setText("Voltar");
+        VoltarLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VoltarLoginActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                                .addComponent(jLabel11)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(CPFUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel9)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(CelularUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jLabel13)
+                                        .addComponent(jLabel15)
+                                        .addComponent(jLabel10)
+                                        .addComponent(jLabel16))
+                                    .addComponent(jLabel17))
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel3Layout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                                .addComponent(DataDeNascimentoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(36, 36, 36)
+                                                .addComponent(jLabel14)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(SexoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(EmailUsuario)
+                                            .addComponent(InfoMedicasUauario)
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                                                .addGap(60, 60, 60)
+                                                .addComponent(VoltarLogin)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(Cadastrar)
+                                                .addGap(135, 135, 135))
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                                                .addComponent(Pix)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(Dinheiro)
+                                                .addGap(46, 46, 46)
+                                                .addComponent(Credito)
+                                                .addGap(34, 34, 34)
+                                                .addComponent(Debito))))
+                                    .addGroup(jPanel3Layout.createSequentialGroup()
+                                        .addGap(59, 59, 59)
+                                        .addComponent(jLabel18)
+                                        .addGap(27, 27, 27)
+                                        .addComponent(SenhaUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(filler1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(73, 73, 73)
+                        .addComponent(jLabel12)
+                        .addGap(18, 18, 18)
+                        .addComponent(NomeUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 464, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(114, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel17)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(62, 62, 62)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(NomeUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel12))
+                        .addGap(20, 20, 20)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(CelularUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel9)
+                            .addComponent(CPFUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel11))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(EmailUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel13))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(DataDeNascimentoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel14)
+                                .addComponent(SexoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(InfoMedicasUauario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel15))
+                        .addGap(30, 30, 30)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(Pix)
+                            .addComponent(jLabel16)
+                            .addComponent(Dinheiro)
+                            .addComponent(Credito)
+                            .addComponent(Debito))
+                        .addGap(21, 21, 21)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel18)
+                            .addComponent(SenhaUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(filler1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(27, 27, 27)))
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Cadastrar)
+                    .addComponent(VoltarLogin))
+                .addContainerGap(156, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Aluno", jPanel3);
+
+        jPanel2.setBackground(new java.awt.Color(0, 0, 0));
+
+>>>>>>> bb6d8ce7b62a30b9b3393245b3901fe2566dd95c
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Nome Completo");
 
         NomeInstru.setBackground(new java.awt.Color(153, 153, 153));
+<<<<<<< HEAD
         NomeInstru.setForeground(new java.awt.Color(0, 0, 0));
+=======
+        NomeInstru.setForeground(new java.awt.Color(153, 153, 153));
+>>>>>>> bb6d8ce7b62a30b9b3393245b3901fe2566dd95c
         NomeInstru.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 NomeInstruActionPerformed(evt);
@@ -249,7 +523,11 @@ public class JFNovoCadastro extends javax.swing.JFrame {
         jLabel3.setText("Endereço");
 
         EnderecoInstru.setBackground(new java.awt.Color(153, 153, 153));
+<<<<<<< HEAD
         EnderecoInstru.setForeground(new java.awt.Color(0, 0, 0));
+=======
+        EnderecoInstru.setForeground(new java.awt.Color(153, 153, 153));
+>>>>>>> bb6d8ce7b62a30b9b3393245b3901fe2566dd95c
         EnderecoInstru.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 EnderecoInstruActionPerformed(evt);
@@ -260,7 +538,11 @@ public class JFNovoCadastro extends javax.swing.JFrame {
         jLabel4.setText("Celular");
 
         CelularInstru.setBackground(new java.awt.Color(153, 153, 153));
+<<<<<<< HEAD
         CelularInstru.setForeground(new java.awt.Color(0, 0, 0));
+=======
+        CelularInstru.setForeground(new java.awt.Color(153, 153, 153));
+>>>>>>> bb6d8ce7b62a30b9b3393245b3901fe2566dd95c
 
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Data de nascimento");
@@ -275,7 +557,11 @@ public class JFNovoCadastro extends javax.swing.JFrame {
         jLabel8.setText("CPF");
 
         EmailInstrutor.setBackground(new java.awt.Color(153, 153, 153));
+<<<<<<< HEAD
         EmailInstrutor.setForeground(new java.awt.Color(0, 0, 0));
+=======
+        EmailInstrutor.setForeground(new java.awt.Color(153, 153, 153));
+>>>>>>> bb6d8ce7b62a30b9b3393245b3901fe2566dd95c
         EmailInstrutor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 EmailInstrutorActionPerformed(evt);
@@ -283,10 +569,17 @@ public class JFNovoCadastro extends javax.swing.JFrame {
         });
 
         DTNSCInstrutor.setBackground(new java.awt.Color(153, 153, 153));
+<<<<<<< HEAD
         DTNSCInstrutor.setForeground(new java.awt.Color(0, 0, 0));
 
         CREAInstrutor.setBackground(new java.awt.Color(153, 153, 153));
         CREAInstrutor.setForeground(new java.awt.Color(0, 0, 0));
+=======
+        DTNSCInstrutor.setForeground(new java.awt.Color(153, 153, 153));
+
+        CREAInstrutor.setBackground(new java.awt.Color(153, 153, 153));
+        CREAInstrutor.setForeground(new java.awt.Color(153, 153, 153));
+>>>>>>> bb6d8ce7b62a30b9b3393245b3901fe2566dd95c
         CREAInstrutor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CREAInstrutorActionPerformed(evt);
@@ -294,13 +587,21 @@ public class JFNovoCadastro extends javax.swing.JFrame {
         });
 
         CPFInstrutor.setBackground(new java.awt.Color(153, 153, 153));
+<<<<<<< HEAD
         CPFInstrutor.setForeground(new java.awt.Color(0, 0, 0));
+=======
+        CPFInstrutor.setForeground(new java.awt.Color(153, 153, 153));
+>>>>>>> bb6d8ce7b62a30b9b3393245b3901fe2566dd95c
 
         jLabel19.setForeground(new java.awt.Color(255, 255, 255));
         jLabel19.setText("Senha");
 
         SenhaInstrutor.setBackground(new java.awt.Color(153, 153, 153));
+<<<<<<< HEAD
         SenhaInstrutor.setForeground(new java.awt.Color(0, 0, 0));
+=======
+        SenhaInstrutor.setForeground(new java.awt.Color(153, 153, 153));
+>>>>>>> bb6d8ce7b62a30b9b3393245b3901fe2566dd95c
 
         CadastrarIns.setBackground(new java.awt.Color(0, 0, 0));
         CadastrarIns.setForeground(new java.awt.Color(255, 255, 255));
@@ -813,10 +1114,10 @@ public class JFNovoCadastro extends javax.swing.JFrame {
 
     private void VoltarLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VoltarLoginActionPerformed
         // TODO add your handling code here:
-        setVisible(false);
-        JFPrincipal janelaP = new JFPrincipal();
-        janelaP.setVisible(true);
-        janelaP.setDefaultCloseOperation(1);
+        //setVisible(false);
+        //JFPrincipal janelaP = new JFPrincipal();
+        //janelaP.setVisible(true);
+        //janelaP.setDefaultCloseOperation(1);
     }//GEN-LAST:event_VoltarLoginActionPerformed
 
     private void CadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CadastrarActionPerformed
@@ -950,7 +1251,10 @@ public class JFNovoCadastro extends javax.swing.JFrame {
     private javax.swing.JButton VoltarLogin;
     private javax.swing.JButton VoltarLoginIns;
     private javax.swing.Box.Filler filler1;
+<<<<<<< HEAD
     private javax.swing.JRadioButton instrutorRadioButton;
+=======
+>>>>>>> bb6d8ce7b62a30b9b3393245b3901fe2566dd95c
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

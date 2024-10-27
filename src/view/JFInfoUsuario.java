@@ -31,7 +31,11 @@ public class JFInfoUsuario extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         TabelaInfoUsuario = new javax.swing.JTable();
+<<<<<<< HEAD
         EditarI = new javax.swing.JToggleButton();
+=======
+        jToggleButton1 = new javax.swing.JToggleButton();
+>>>>>>> bb6d8ce7b62a30b9b3393245b3901fe2566dd95c
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -74,12 +78,21 @@ public class JFInfoUsuario extends javax.swing.JFrame {
             TabelaInfoUsuario.getColumnModel().getColumn(4).setResizable(false);
         }
 
+<<<<<<< HEAD
         EditarI.setBackground(new java.awt.Color(0, 0, 0));
         EditarI.setForeground(new java.awt.Color(255, 255, 255));
         EditarI.setText("Editar");
         EditarI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 EditarIActionPerformed(evt);
+=======
+        jToggleButton1.setBackground(new java.awt.Color(0, 0, 0));
+        jToggleButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jToggleButton1.setText("Editar");
+        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton1ActionPerformed(evt);
+>>>>>>> bb6d8ce7b62a30b9b3393245b3901fe2566dd95c
             }
         });
 
@@ -92,7 +105,11 @@ public class JFInfoUsuario extends javax.swing.JFrame {
                 .addGap(178, 178, 178)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+<<<<<<< HEAD
                 .addComponent(EditarI)
+=======
+                .addComponent(jToggleButton1)
+>>>>>>> bb6d8ce7b62a30b9b3393245b3901fe2566dd95c
                 .addGap(15, 15, 15))
         );
         jPanel1Layout.setVerticalGroup(
@@ -104,7 +121,11 @@ public class JFInfoUsuario extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
+<<<<<<< HEAD
                         .addComponent(EditarI)))
+=======
+                        .addComponent(jToggleButton1)))
+>>>>>>> bb6d8ce7b62a30b9b3393245b3901fe2566dd95c
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 415, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(170, 170, 170))
@@ -126,9 +147,15 @@ public class JFInfoUsuario extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+<<<<<<< HEAD
     private void EditarIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditarIActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_EditarIActionPerformed
+=======
+    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jToggleButton1ActionPerformed
+>>>>>>> bb6d8ce7b62a30b9b3393245b3901fe2566dd95c
 
     /**
      * @param args the command line arguments
@@ -171,5 +198,6 @@ public class JFInfoUsuario extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JToggleButton jToggleButton1;
     // End of variables declaration//GEN-END:variables
 }

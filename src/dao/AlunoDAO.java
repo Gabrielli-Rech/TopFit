@@ -8,12 +8,19 @@ import java.util.ArrayList;
 
 import conexao.Conexao;
 import model.Alunos;
+<<<<<<< HEAD
 import view.JFNovoCadastro;
+=======
+>>>>>>> bb6d8ce7b62a30b9b3393245b3901fe2566dd95c
 
 
 
 public class AlunoDAO {
+<<<<<<< HEAD
     public void cadastrarAluno(JFNovoCadastro aVO) {
+=======
+    public void cadastrarAluno(Alunos aVO) {
+>>>>>>> bb6d8ce7b62a30b9b3393245b3901fe2566dd95c
         try {
             Connection con = Conexao.getConexao();
             String sql = ("insert into alunos (Nome, Endereco, Telefone, Data_de_Nascimento, Email, Info_Medicas, CPF, Sexo, Matricula, Senha");
