@@ -5,6 +5,7 @@
  */
 package view;
 
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 /**
@@ -171,40 +172,25 @@ public class JFPrincipal extends javax.swing.JFrame {
         String username = Login.getText();
         String password = new String(SenhaLogin.getPassword());
 
-        // Exemplo de autenticação simples
+        // Verificação do login
         if (username.equals("admin") && password.equals("senha123")) {
             JOptionPane.showMessageDialog(this, "Login bem-sucedido!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
-            // Aqui você pode abrir a próxima tela ou funcionalidade
             Admin janelaNC = new Admin();
             janelaNC.setVisible(true);
-            janelaNC.setDefaultCloseOperation(1);
-        } else {
-            JOptionPane.showMessageDialog(this, "Usuário ou senha incorretos.", "Erro", JOptionPane.ERROR_MESSAGE);
-            // Limpar os campos após falha, se desejar
-            Login.setText("");
-            SenhaLogin.setText("");
-        }
-        if (username.equals("instru") && password.equals("senha123")) {
+            janelaNC.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        } else if (username.equals("instru") && password.equals("senha123")) {
             JOptionPane.showMessageDialog(this, "Login bem-sucedido!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
-            // Aqui você pode abrir a próxima tela ou funcionalidade
-            JFInfoGerenciador janelaNC = new JFInfoGerenciador();
+            JFAreaGerenciador janelaNC = new JFAreaGerenciador();
             janelaNC.setVisible(true);
-            janelaNC.setDefaultCloseOperation(1);
-        } else {
-            JOptionPane.showMessageDialog(this, "Usuário ou senha incorretos.", "Erro", JOptionPane.ERROR_MESSAGE);
-            // Limpar os campos após falha, se desejar
-            Login.setText("");
-            SenhaLogin.setText("");
-        }
-        if (username.equals("aluno") && password.equals("senha123")) {
+            janelaNC.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        } else if (username.equals("aluno") && password.equals("senha123")) {
             JOptionPane.showMessageDialog(this, "Login bem-sucedido!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
-            // Aqui você pode abrir a próxima tela ou funcionalidade
-            JFInfoUsuario janelaNC = new JFInfoUsuario();
+            JFAreaUsuario janelaNC = new JFAreaUsuario();
             janelaNC.setVisible(true);
-            janelaNC.setDefaultCloseOperation(1);
+            janelaNC.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         } else {
+            // Mensagem de erro única para tentativas de login inválidas
             JOptionPane.showMessageDialog(this, "Usuário ou senha incorretos.", "Erro", JOptionPane.ERROR_MESSAGE);
-            // Limpar os campos após falha, se desejar
             Login.setText("");
             SenhaLogin.setText("");
         }

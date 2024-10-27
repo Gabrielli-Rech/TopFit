@@ -31,7 +31,7 @@ public class JFInfoUsuario extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         TabelaInfoUsuario = new javax.swing.JTable();
-        jToggleButton1 = new javax.swing.JToggleButton();
+        EditarI = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -74,12 +74,12 @@ public class JFInfoUsuario extends javax.swing.JFrame {
             TabelaInfoUsuario.getColumnModel().getColumn(4).setResizable(false);
         }
 
-        jToggleButton1.setBackground(new java.awt.Color(0, 0, 0));
-        jToggleButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jToggleButton1.setText("Editar");
-        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
+        EditarI.setBackground(new java.awt.Color(0, 0, 0));
+        EditarI.setForeground(new java.awt.Color(255, 255, 255));
+        EditarI.setText("Editar");
+        EditarI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton1ActionPerformed(evt);
+                EditarIActionPerformed(evt);
             }
         });
 
@@ -92,7 +92,7 @@ public class JFInfoUsuario extends javax.swing.JFrame {
                 .addGap(178, 178, 178)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jToggleButton1)
+                .addComponent(EditarI)
                 .addGap(15, 15, 15))
         );
         jPanel1Layout.setVerticalGroup(
@@ -104,7 +104,7 @@ public class JFInfoUsuario extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jToggleButton1)))
+                        .addComponent(EditarI)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 415, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(170, 170, 170))
@@ -126,9 +126,9 @@ public class JFInfoUsuario extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
+    private void EditarIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditarIActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jToggleButton1ActionPerformed
+    }//GEN-LAST:event_EditarIActionPerformed
 
     /**
      * @param args the command line arguments
@@ -166,10 +166,10 @@ public class JFInfoUsuario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JToggleButton EditarI;
     private javax.swing.JTable TabelaInfoUsuario;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JToggleButton jToggleButton1;
     // End of variables declaration//GEN-END:variables
 }

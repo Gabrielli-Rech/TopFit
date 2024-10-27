@@ -5,11 +5,12 @@ import java.util.ArrayList;
 import dao.AlunoDAO;
 import dao.DAOFactory;
 import model.Alunos;
+import view.JFNovoCadastro;
 
 public class AlunoController {
     AlunoDAO aDAO = DAOFactory.AlunoDAO();
 
-    public void cadastrarAluno(Alunos aVO) {
+    public void cadastrarAluno(JFNovoCadastro aVO) {
         aDAO.cadastrarAluno(aVO);
     }
 

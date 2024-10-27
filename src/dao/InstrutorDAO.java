@@ -8,9 +8,10 @@ import java.util.ArrayList;
 
 import conexao.Conexao;
 import model.Instrutor;
+import view.JFNovoCadastro;
 
 public class InstrutorDAO {
-    public void cadastrarInstrutor(Instrutor iVO) {
+    public void cadastrarInstrutor(JFNovoCadastro iVO) {
         try {
             Connection con = Conexao.getConexao();
 

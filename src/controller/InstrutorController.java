@@ -5,11 +5,12 @@ import java.util.ArrayList;
 import dao.DAOFactory;
 import dao.InstrutorDAO;
 import model.Instrutor;
+import view.JFNovoCadastro;
 
 public class InstrutorController {
     InstrutorDAO iDAO = DAOFactory.InstrutorDAO();
 
-    public void cadastrarInstrutor(Instrutor iVO) {
+    public void cadastrarInstrutor(JFNovoCadastro iVO) {
         iDAO.cadastrarInstrutor(iVO);
     }
 
